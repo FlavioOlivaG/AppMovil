@@ -16,6 +16,21 @@
 
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
   </div>
+  <ion-header>
+    
+  </ion-header>
+  <ion-content class="auth-form">
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-button [routerLink]="['/Register/registerShopdown']" expand="block" color="primary">Registrarse</ion-button>
+          <span class="divider line one-line"></span>
+          <span class="already">Ya tienes una cuenta?</span>
+          <ion-button [routerLink]="['/login/loginShopdown']" expand="block" color="danger">Iniciar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
 </ion-content>
