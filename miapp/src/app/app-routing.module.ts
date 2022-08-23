@@ -22,6 +22,18 @@ const routes: Routes = [
   {
     path: 'tienda/tiendaShopdown',
     loadChildren: () => import('./tienda/tienda.module').then( m => m.TiendaPageModule)
+  },
+  {
+    path: 'Configuracion/configuracion',
+    loadChildren: () => import('./Configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
+  },
+  {
+    path: 'Ayuda/ayuda',
+    loadChildren: () => import('./Ayuda/ayuda.module').then( m => m.AyudaPageModule)
+  },
+  {
+    path: 'Tu-Tienda/tu-tienda',
+    loadChildren: () => import('./Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
   }
 ];
 
