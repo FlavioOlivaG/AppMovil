@@ -5,23 +5,8 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './tienda.page.html',
   styleUrls: ['./tienda.page.scss'],
 })
-export class TiendaPage implements OnInit {
-  public folder: string;
-
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-  }
-  ;
-  //Barra de arriba donde esta el titulo
-  public appToolbar = [
-    // Cambiar url y crear para favorito
-    { title: 'Favorito', url: 'favorito/Favorito', icon: 'heart' },
-    //Carro
-    { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
-    ];
-    public appBarra = [
+export class TiendaPage  {
+  public appBarra = [
     //Tienda de la pagina
     { title: 'Tienda', url: '/tienda/tiendaShopdown', icon: 'storefront' },
     //Tu-Tienda tienda del usuario
@@ -29,6 +14,13 @@ export class TiendaPage implements OnInit {
     //Perfil
     { title: 'Perfil', url: '/perfil/Perfil', icon: 'person-circle' },
 
+  ];
+  //Barra de arriba donde esta el titulo
+  public appToolbar = [
+    //Favorito
+    { title: 'Favorito', url: 'favorito/Favorito', icon: 'heart' },
+    //Carro
+    { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
+    
   ]
-
 }

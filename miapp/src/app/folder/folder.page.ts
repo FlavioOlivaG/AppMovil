@@ -6,22 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './folder.page.html',
   styleUrls: ['./folder.page.scss'],
 })
-export class FolderPage implements OnInit {
-  public folder: string;
-
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-  }
-  ;
-  //Barra de arriba donde esta el titulo
-  public appToolbar = [
-                                        // Cambiar url y crear para favorito
-    { title: 'Favorito', url: 'favorito/Favorito', icon: 'heart' },
-    //Carro
-    { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
-  ];
+export class FolderPage {
   public appBarra = [
     //Tienda de la pagina
     { title: 'Tienda', url: '/tienda/tiendaShopdown', icon: 'storefront' },
@@ -30,5 +15,14 @@ export class FolderPage implements OnInit {
     //Perfil
     { title: 'Perfil', url: '/perfil/Perfil', icon: 'person-circle' },
 
+  ];
+  //Barra de arriba donde esta el titulo
+  public appToolbar = [
+    //Favorito
+    { title: 'Favorito', url: 'favorito/Favorito', icon: 'heart' },
+    //Carro
+    { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
+    
   ]
+  constructor() {}
 }
