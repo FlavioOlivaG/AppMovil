@@ -23,7 +23,7 @@ export class AppComponent {
   //Barra de la vista principal
   public appBarra = [
     //Tienda de la pagina
-    { title: 'Tienda', url: '/Tienda/tiendaShopdown', icon: 'storefront' },
+    { title: 'Tienda', url: '/tienda/tiendaShopdown', icon: 'storefront' },
     //Tu-Tienda tienda del usuario
     { title: 'Mi Tienda', url: '/Tu-Tienda/tu-tienda', icon: 'shirt-outline' },
     //Perfil

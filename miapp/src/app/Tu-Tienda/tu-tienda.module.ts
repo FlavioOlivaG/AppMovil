@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { TuTiendaPageRoutingModule } from './tu-tienda-routing.module';
-
+import { AppComponent } from '../app.component';
 import { TuTiendaPage } from './tu-tienda.page';
 
 @NgModule({
