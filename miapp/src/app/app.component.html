@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
 
-          <ion-list-header color="#69179c"><ion-icon name="archive-sharp" ></ion-icon>ShopDown </ion-list-header>
+          <ion-list-header color="#69179c"><ion-icon name="archive-sharp" ></ion-icon> ShopDown</ion-list-header>
 
           <ion-note>correos@shopdown.com</ion-note>
 
@@ -35,11 +35,7 @@
         </ion-tab-bar>
 
       </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content">
-
       <ion-tabs>
-
         <ion-tab-bar >
           <ion-tab-button auto-hide="false" *ngFor="let p of appBarra; let i = index" >
             <ion-tab-button routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -48,10 +44,13 @@
             </ion-tab-button>
           </ion-tab-button>
         </ion-tab-bar>
-
-
-
       </ion-tabs>
+    </ion-menu>
+    <ion-router-outlet id="main-content">
+
+      
+
+
       <ion-header [translucent]="true">
         <ion-toolbar>
 
