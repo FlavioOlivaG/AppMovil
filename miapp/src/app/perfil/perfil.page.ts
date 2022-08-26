@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  selector: 'app-perfil',
+  templateUrl: './perfil.page.html',
+  styleUrls: ['./perfil.page.scss'],
 })
-export class FolderPage implements OnInit {
+export class PerfilPage implements OnInit {
   public folder: string;
 
   constructor(private activatedRoute: ActivatedRoute) { }
@@ -17,12 +16,12 @@ export class FolderPage implements OnInit {
   ;
   //Barra de arriba donde esta el titulo
   public appToolbar = [
-                                        // Cambiar url y crear para favorito
+    // Cambiar url y crear para favorito
     { title: 'Favorito', url: 'favorito/Favorito', icon: 'heart' },
     //Carro
     { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
-  ];
-  public appBarra = [
+    ];
+    public appBarra = [
     //Tienda de la pagina
     { title: 'Tienda', url: '/tienda/tiendaShopdown', icon: 'storefront' },
     //Tu-Tienda tienda del usuario
@@ -31,4 +30,5 @@ export class FolderPage implements OnInit {
     { title: 'Perfil', url: '/perfil/Perfil', icon: 'person-circle' },
 
   ]
+
 }

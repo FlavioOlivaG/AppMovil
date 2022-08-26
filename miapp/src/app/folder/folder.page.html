@@ -4,6 +4,9 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ folder }}</ion-title>
+    <ion-buttons slot="end" auto-hide="false" *ngFor="let p of appToolbar; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+      <ion-button><ion-icon  name ={{p.icon}}> {{ p.title }}</ion-icon></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -34,3 +37,9 @@
     </ion-grid>
   </ion-content>
 </ion-content>
+<ion-tab-bar >
+  <ion-tab-button auto-hide="false" *ngFor="let p of appBarra; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+      <ion-icon  name ={{p.icon}}></ion-icon>
+      <ion-label>{{ p.title }}</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

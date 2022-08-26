@@ -12,8 +12,8 @@ export class AppComponent {
     { title: 'Login ShopDown', url: '/login/loginShopdown', icon: 'storefront' },
     //Registrarse en la pagina
     { title: 'Register', url: '/Register/registerShopdown', icon: 'paper-plane' },
-    //Favoritos
-    { title: 'Favoritos', url: '/folder/Favoritos', icon: 'heart' },
+    //Folder
+    { title: 'Folder', url: '/folder/Favoritos', icon: 'heart' },
 
     //
     { title: '', url: '/folder/Trash', icon: 'trash' },
@@ -27,13 +27,16 @@ export class AppComponent {
     //Tu-Tienda tienda del usuario
     { title: 'Mi Tienda', url: '/Tu-Tienda/tu-tienda', icon: 'shirt-outline' },
     //Perfil
-    { title: 'Perfil', url: '/folder/Perfil', icon: 'person-circle' },
+    { title: 'Perfil', url: '/perfil/Perfil', icon: 'person-circle' },
 
   ];
   //Barra de arriba donde esta el titulo
-  public appCarro = [
+  public appToolbar = [
+    //Favorito
+    { title: 'Favorito', url: 'favorito/favorito', icon: 'heart' },
     //Carro
-    { title: 'Carro', url: 'folder/Carro', icon: 'cart' },
+    { title: 'Carro', url: 'carro/carro', icon: 'cart' },
+    
   ];
   //Barra del menu de la barra del menu
   public appBarraBarra = [

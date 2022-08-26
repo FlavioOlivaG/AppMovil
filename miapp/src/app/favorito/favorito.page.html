@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title> Tienda</ion-title>
+    <ion-title> Favorito</ion-title>
     <ion-buttons slot="end" auto-hide="false" *ngFor="let p of appToolbar; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
       <ion-button><ion-icon  name ={{p.icon}}> {{ p.title }}</ion-icon></ion-button>
     </ion-buttons>
