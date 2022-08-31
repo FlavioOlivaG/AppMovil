@@ -8,10 +8,6 @@ export class AppComponent {
   //barra del menu
   public appPages = [
 
-    //Login De la pagina
-    { title: 'Login ShopDown', url: '/login/loginShopdown', icon: 'storefront' },
-    //Registrarse en la pagina
-    { title: 'Register', url: '/Register/registerShopdown', icon: 'paper-plane' },
     //Folder
     { title: 'Folder', url: '/folder/Folders', icon: 'heart' },
 

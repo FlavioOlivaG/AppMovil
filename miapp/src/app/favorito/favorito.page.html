@@ -4,8 +4,13 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title> Favorito</ion-title>
-    <ion-buttons slot="end" auto-hide="false" *ngFor="let p of appToolbar; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-      <ion-button><ion-icon  name ={{p.icon}}> {{ p.title }}</ion-icon></ion-button>
+    <ion-buttons slot="end" >
+      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/favorito/Favorito']" lines="none" detail="false" routerLinkActive="selected">
+        <ion-icon  name ="heart"></ion-icon>
+      </ion-button>
+      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/carro/Carro']" lines="none" detail="false" >
+        <ion-icon  name ="cart"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
