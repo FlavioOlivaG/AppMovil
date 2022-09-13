@@ -9,11 +9,11 @@ export class AppComponent {
   public appPages = [
 
     //Folder
-    { title: 'Folder', url: '/folder/Folders', icon: 'heart' },
+    { title: 'Inicio', url: '/folder/Folders', icon: 'home' },
 
     //Carro y favorito mientras no se solucione el toolbar
     { title: 'Carro', url: '/carro/Carro', icon: 'cart' },
-    { title: 'Favorito', url: '/favorito/Favorito', icon: 'heart' },
+    { title: 'Favoritos', url: '/favorito/Favorito', icon: 'heart' },
   ];
   //Barra del menu de la barra del menu
   public appBarraBarra = [
@@ -23,7 +23,7 @@ export class AppComponent {
     { title: 'Ayuda', url: 'Ayuda/ayuda', icon: 'help' },
   ];
 
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['Tiendas'];
   constructor() {}
 }
 
