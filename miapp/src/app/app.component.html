@@ -1,4 +1,5 @@
 <ion-app>
+
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
@@ -25,48 +26,18 @@
           </ion-item>
         </ion-list>
 
-        <ion-tab-bar >
-          <ion-tab-button auto-hide="false" *ngFor="let p of appBarraBarra; let i = index" >
-            <ion-tab-button routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon  name ={{p.icon}}></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-tab-button>
-          </ion-tab-button>
-        </ion-tab-bar>
+        
 
       </ion-content>
+      <ion-tab-bar type="overlay">
+        <ion-tab-button auto-hide="false" *ngFor="let p of appBarraBarra; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon  name ={{p.icon}}></ion-icon>
+            <ion-label>{{ p.title }}</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
     </ion-menu>
-    <ion-router-outlet id="main-content">
-
-      <ion-tabs>
-
-        <ion-tab-bar >
-          <ion-tab-button auto-hide="false" *ngFor="let p of appBarra; let i = index" >
-            <ion-tab-button routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon  name ={{p.icon}}></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-tab-button>
-          </ion-tab-button>
-        </ion-tab-bar>
-
-
-
-      </ion-tabs>
-      <ion-header [translucent]="true">
-        <ion-toolbar>
-
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-
-          <ion-buttons slot="end" *ngFor="let p of appCarro; let i = index">
-            <ion-button routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-
+    <ion-router-outlet id="main-content" >
+      
     </ion-router-outlet>
   </ion-split-pane>
 </ion-app>

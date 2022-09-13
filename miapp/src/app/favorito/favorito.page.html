@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Favorito</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/favorito/Favorito']" lines="none" detail="false" routerLinkActive="selected">
+        <ion-icon  name ="heart"></ion-icon>
+      </ion-button>
+      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/carro/Carro']" lines="none" detail="false" >
+        <ion-icon  name ="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img src="C:\Users\efrap\Downloads\descargar.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>Nombre Producto</ion-text>
+      <ion-button fill="" style="color:rgb(199, 143, 255)" slot="end">Eliminar</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      <ion-text>Precio: $50.000</ion-text> <div></div>
+      description: esta es la descripcion del producto, 
+      con esto veremos la descripcion del producto 
+      pa que se vea de pana la cosa
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img src="C:\Users\efrap\Downloads\descargar.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>Nombre Producto</ion-text>
+      <ion-button fill="" style="color:rgb(199, 143, 255)" slot="end">Eliminar</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      <ion-text>Precio: $50.000</ion-text> <div></div>
+      description: esta es la descripcion del producto, 
+      con esto veremos la descripcion del producto 
+      pa que se vea de pana la cosa
+      
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-tab-bar >
+  <ion-tab-button auto-hide="false" *ngFor="let p of appBarra; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+      <ion-icon  name ={{p.icon}}></ion-icon>
+      <ion-label>{{ p.title }}</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
