@@ -8,9 +8,6 @@ export class AppComponent {
   //barra del menu
   public appPages = [
 
-    //Folder
-    { title: 'Folder', url: '/folder/Folders', icon: 'heart' },
-
     //Carro y favorito mientras no se solucione el toolbar
     { title: 'Carro', url: '/carro/Carro', icon: 'cart' },
     { title: 'Favorito', url: '/favorito/Favorito', icon: 'heart' },
