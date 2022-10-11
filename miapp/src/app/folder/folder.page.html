@@ -1,54 +1,16 @@
-<ion-header >
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title> ah </ion-title>
-
-
-    <ion-buttons slot="end" >
-      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/favorito/Favorito']" lines="none" detail="false">
-        <ion-icon  name ="heart"></ion-icon>
-      </ion-button>
-      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/carro/Carro']" lines="none" detail="false">
-        <ion-icon  name ="cart"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-
-
-  </ion-toolbar>
+<ion-header>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large"></ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="background">
 
-  <div id="container">
-    <strong class="capitalize"></strong>
-    
+
+
+  <div class="div1"></div>
+  <div class="div2">
+    <ion-button [routerLink]="['/Register/registerShopdown']"  color="danger" class="btn-register">Registrarse</ion-button>
+    <ion-button [routerLink]="['/login/loginShopdown']" class="btn-login" color="success">Iniciar Sesion</ion-button>
   </div>
-  <ion-header>
-    
-  </ion-header>
-  <ion-content class="auth-form">
-    <ion-grid>
-      <ion-row>
-        <ion-col align-self-center>
-          <ion-button [routerLink]="['/Register/registerShopdown']" expand="block" color="primary">Registrarse</ion-button>
-          <span class="divider line one-line"></span>
-          <span class="already">Ya tienes una cuenta?</span>
-          <ion-button [routerLink]="['/login/loginShopdown']" expand="block" color="danger">Iniciar</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+
+
+
 </ion-content>
-<ion-tab-bar >
-  <ion-tab-button auto-hide="false" *ngFor="let p of appBarra; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-      <ion-icon  name ={{p.icon}}></ion-icon>
-      <ion-label>{{ p.title }}</ion-label>
-  </ion-tab-button>
-</ion-tab-bar>
