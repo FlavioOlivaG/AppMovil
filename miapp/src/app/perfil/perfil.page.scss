@@ -11,8 +11,49 @@ ion-avatar {
 }
 
 .nombre {
-  margin-left: 32%;
-  font-weight: 1000;
+  text-align: center;
+}
 
+ion-tab-button.selected {
+  --color: #d17aff;
+}
+
+.title {
+  text-align: center;
+}
+
+//-----------------------------Calificiacao---------------------
+.texto{
+  text-align: center;
+}
+
+ion-range::part(knob) {
+  background: #7200be;
+}
+
+ion-range::part(bar) {
+  background: #6500a8;
+}
+
+ion-range::part(bar-active) {
+  background: #5b00b1;
+}
+.range1 {
+  width: 80%;
+  text-align: center;
 
 }
+.range2 {
+  width: 80%;
+  text-align: center;
+}
+
+.txt {
+  color: rgb(111, 0, 255);
+  
+}
+
+
+
+
+  //-----------------------------Calificiacao---------------------

@@ -15,12 +15,5 @@ export class PerfilPage {
     { title: 'Perfil', url: '/perfil/Perfil', icon: 'person-circle' },
 
   ];
-  //Barra de arriba donde esta el titulo
-  public appToolbar = [
-    //Favorito
-    { title: 'Favorito', url: 'favorito/Favorito', icon: 'heart' },
-    //Carro
-    { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
-    
-  ]
+
 }
