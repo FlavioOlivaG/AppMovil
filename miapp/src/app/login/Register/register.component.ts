@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { IReg } from "./i-reg";
-import { SregService } from "./sreg.service";
+import { IReg } from "../interface/i-reg";
+import { SregService } from "../sreg.service";
 
 @Component({
     selector: 'app-login',
@@ -25,7 +25,7 @@ import { SregService } from "./sreg.service";
     grabar(){
       console.log("grabando ",this.registro)
       this.cliServ.grabarServicio(this.registro)
-          .subscribe( persona => {console.log("reciboPage",persona)} );
+          .subscribe( persona => {console.log("Register component....",persona)} );
   
     }
   }

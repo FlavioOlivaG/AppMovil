@@ -9,48 +9,49 @@ const routes: Routes = [
   },
   {
     path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    loadChildren: () => import('./login/folder/folder.module').then( m => m.FolderPageModule)
   },
   {
     path: 'login/loginShopdown',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginModule)
-  },
-  {
-    path: 'Register/registerShopdown',
-    loadChildren: () => import('./Register/register.module').then( m => m.RegisterModule)
-  },
-  {
-    path: 'tienda/tiendaShopdown',
-    loadChildren: () => import('./tienda/tienda.module').then( m => m.TiendaPageModule)
-  },
-  {
-    path: 'Configuracion/configuracion',
-    loadChildren: () => import('./Configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
-  },
-  {
-    path: 'Ayuda/ayuda',
-    loadChildren: () => import('./Ayuda/ayuda.module').then( m => m.AyudaPageModule)
-  },
-  {
-    path: 'Tu-Tienda/tu-tienda',
-    loadChildren: () => import('./Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
-  },
-  {
-    path: 'carro/Carro',
-    loadChildren: () => import('./carro/carro.module').then( m => m.CarroPageModule)
-  },
-  {
-    path: 'favorito/Favorito',
-    loadChildren: () => import('./favorito/favorito.module').then( m => m.FavoritoPageModule)
-  },
-  {
-    path: 'perfil/Perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./login/login/login.module').then( m => m.LoginModule)
   },
   {
     path: 'forgot-password',
-    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+    loadChildren: () => import('./login/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'Register/registerShopdown',
+    loadChildren: () => import('./login/Register/register.module').then( m => m.RegisterModule)
+  },
+  {
+    path: 'tienda/tiendaShopdown',
+    loadChildren: () => import('./usuarios/tienda/tienda.module').then( m => m.TiendaPageModule)
+  },
+  {
+    path: 'Configuracion/configuracion',
+    loadChildren: () => import('./usuarios/Configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
+  },
+  {
+    path: 'Ayuda/ayuda',
+    loadChildren: () => import('./usuarios/Ayuda/ayuda.module').then( m => m.AyudaPageModule)
+  },
+  {
+    path: 'Tu-Tienda/tu-tienda',
+    loadChildren: () => import('./usuarios/Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
+  },
+  {
+    path: 'carro/Carro',
+    loadChildren: () => import('./usuarios/carro/carro.module').then( m => m.CarroPageModule)
+  },
+  {
+    path: 'favorito/Favorito',
+    loadChildren: () => import('./usuarios/favorito/favorito.module').then( m => m.FavoritoPageModule)
+  },
+  {
+    path: 'perfil/Perfil',
+    loadChildren: () => import('./usuarios/perfil/perfil.module').then( m => m.PerfilPageModule)
   }
+  
 
 
 ];
