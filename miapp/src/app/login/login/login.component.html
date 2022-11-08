@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Volver</ion-back-button>
+    </ion-buttons>
+    <ion-title>Mi cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="text" value="elchanguito@gmail.com" required disabled></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" value="disabled" required disabled></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" [routerLink]="['/perfil/Perfil']">Iniciar Sesión</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">Olvidaste tu contraseña?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
