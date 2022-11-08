@@ -9,25 +9,34 @@
 <ion-content>
   <form>
     <ion-item lines="full">
-      <ion-label position="floating">Nombres</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txNombre" [(ngModel)]="registro.nombre" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Apellidos</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" name="txApellido" [(ngModel)]="registro.apellido" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Rut</ion-label>
+      <ion-input type="text" name="txRut" [(ngModel)]="registro.rut" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" name="txMail" [(ngModel)]="registro.mail" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" name="txContrasenna" [(ngModel)]="registro.contrasenna" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Confiramar Contraseña</ion-label>
+      <ion-input type="password" name="txCContrasenna"  required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Registrarse</ion-button>
+        <ion-button type="submit" color="danger" (click)="grabar()" expand="block">Registrarse</ion-button>
       </ion-col>
     </ion-row>
+    {{registro.nombre}}
   </form>
 </ion-content>

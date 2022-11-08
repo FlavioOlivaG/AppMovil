@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Elchan",
+      "apellido": "Güito",
+      "rut": "19222333-k",
+      "mail": "el.güito@duocuc.cl",
+      "contrasenna": "111eee",
+      "rol": ""
+    },
+    {
+      "id": 2,
+      "nombre": "Diego",
+      "apellido": "Escobar",
+      "rut": "20.056.378-k",
+      "mail": "die.escobar@duocuc.cl",
+      "contrasenna": "111eee",
+      "rol": "ADMIN"
+    },
+    {
+      "nombre": "Flavio",
+      "apellido": "Oliva",
+      "rut": "20.565.258-k",
+      "mail": "fl.oliva@duocuc.cl",
+      "contrasenna": "111eee",
+      "rol": "ADMIN",
+      "id": 3
+    },
+    {
+      "nombre": "Efraín",
+      "apellido": "Pasarín",
+      "rut": "20.044.378-0",
+      "mail": "ef.pasarin@duocuc.cl",
+      "contrasenna": "111eee",
+      "rol": "ADMIN",
+      "id": 4
+    }
+  ]
+}
