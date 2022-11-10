@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { IReg } from "../interface/i-reg";
+import { Router } from "@angular/router";
+import { IReg, IRegC } from "../interface/i-reg";
 import { SregService } from "../sreg.service";
 
 @Component({
@@ -9,23 +10,48 @@ import { SregService } from "../sreg.service";
   })
   export class RegisterComponent implements OnInit {
     registro:IReg={
-        nombre: "Elchan",
-        apellido: "Güito",
-        rut: "19222333-k",
-        mail: "el.güito@duocuc.cl",
-        contrasenna: "111eee",
+        nombre: "",
+        apellido: "",
+        rut: "",
+        mail: "",
+        contrasenna: "",
       }
+    cContrasenna:IRegC={
+      contrasenna: ""
+    }
 
 
-    constructor(private cliServ:SregService) { }
+    constructor(private cliServ:SregService, protected router:Router) { }
 
     ngOnInit() {
     }
   
     grabar(){
-      console.log("grabando ",this.registro)
-      this.cliServ.grabarServicio(this.registro)
+
+      if (this.registro.contrasenna == ""  || 
+          this.registro.nombre == "" ||
+          this.registro.apellido == "" ||
+          this.registro.rut== "" || 
+          this.registro.mail == "" || 
+          this.cContrasenna.contrasenna == "")
+        {
+        console.log("Algun campo vacio?");
+        this.router.navigate(['Register/registerShopdown']);
+        
+      }else {
+        if (this.registro.contrasenna == this.cContrasenna.contrasenna){
+        console.log("grabando... ",this.registro)
+        this.cliServ.grabarServicio(this.registro)
           .subscribe( persona => {console.log("Register component....",persona)} );
-  
+          this.router.navigate(['login/loginShopdown']);
+        
+        }else{
+
+        console.log("Error Contraseña no coincide");
+        this.router.navigate(['Register/registerShopdown']);
+        }
+      }
+      
+      
     }
   }

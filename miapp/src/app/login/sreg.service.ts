@@ -13,7 +13,7 @@ export class SregService {
 
   grabarServicio(reg:IReg):Observable<IReg>{
     console.log("Guardando Datos...",reg)
-    const stUrl =`${ this.baseUrl }/usuarios`
+    const stUrl =`${ this.baseUrl }usuarios`
     return this.http.post<IReg>(stUrl, reg )
     //.subscribe( persona => {console.log("recibo Service",persona)} );
   }

@@ -4,4 +4,9 @@ export interface IReg {
     rut: String,
     mail: String,
     contrasenna: String,
+    
+}
+export interface IRegC {
+    contrasenna: String,
+    
 }

@@ -10,31 +10,88 @@
       "rol": ""
     },
     {
-      "id": 2,
-      "nombre": "Diego",
-      "apellido": "Escobar",
-      "rut": "20.056.378-k",
-      "mail": "die.escobar@duocuc.cl",
-      "contrasenna": "111eee",
-      "rol": "ADMIN"
+      "nombre": "fdas",
+      "apellido": "fdsa",
+      "rut": "fdsa",
+      "mail": "fdsa",
+      "contrasenna": "111",
+      "id": 2
     },
     {
-      "nombre": "Flavio",
-      "apellido": "Oliva",
-      "rut": "20.565.258-k",
-      "mail": "fl.oliva@duocuc.cl",
-      "contrasenna": "111eee",
-      "rol": "ADMIN",
+      "nombre": "3rewa",
+      "apellido": "rewa4321ewq",
+      "rut": "redwa",
+      "mail": "rewaefwa",
+      "contrasenna": "111",
       "id": 3
     },
     {
-      "nombre": "Efraín",
-      "apellido": "Pasarín",
-      "rut": "20.044.378-0",
-      "mail": "ef.pasarin@duocuc.cl",
-      "contrasenna": "111eee",
-      "rol": "ADMIN",
+      "nombre": "111",
+      "apellido": "111",
+      "rut": "111",
+      "mail": "111",
+      "contrasenna": "111",
       "id": 4
+    }
+  ],
+  "producto": [
+    {
+      "nombre": "nombreProducto",
+      "tipo": "electico",
+      "idUsuarioVendedor": 0,
+      "descripcion": "",
+      "id": 0
+    }
+  ],
+  "envio": [
+    {
+      "idComprador": 0,
+      "estado": "enviado, entregado, en proceso de empaque",
+      "idDireccion": 0,
+      "id": 0
+    }
+  ],
+  "direccion": [
+    {
+      "idComprador": 0,
+      "pais": "Solo en chile",
+      "region": "RM",
+      "comuna": "san bernardo",
+      "calle": "eliodoro weas ctm",
+      "numeroDir": 1251,
+      "numeroDpto": "",
+      "id": 0
+    }
+  ],
+  "boleta": [
+    {
+      "idComprador": 0,
+      "idVendedor": 0,
+      "idEnvio": 0,
+      "idProducto": 0,
+      "idDetalleCompra": 0,
+      "total": 0,
+      "id": 0
+    }
+  ],
+  "carrito": [
+    {
+      "idComprador": 0,
+      "idProducto": 0,
+      "cantProd": 0,
+      "precio": 0,
+      "id": 0
+    }
+  ],
+  "factura": [
+    {
+      "idComprador": 0,
+      "idVendedor": 0,
+      "idEnvio": 0,
+      "idProducto": 0,
+      "idDetalleCompra": 0,
+      "total": 0,
+      "id": 0
     }
   ]
 }

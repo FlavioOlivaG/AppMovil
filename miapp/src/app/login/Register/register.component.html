@@ -30,13 +30,12 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Confiramar Contraseña</ion-label>
-      <ion-input type="password" name="txCContrasenna"  required></ion-input>
+      <ion-input type="password" name="txCContrasenna" [(ngModel)]="cContrasenna.contrasenna" required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" (click)="grabar()" expand="block">Registrarse</ion-button>
+        <ion-button type="submit" color="danger" (click)="grabar()" [routerLink]="['perfil/Perfil']" expand="block">Registrarse</ion-button>
       </ion-col>
     </ion-row>
-    {{registro.nombre}}
   </form>
 </ion-content>
