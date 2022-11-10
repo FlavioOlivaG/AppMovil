@@ -35,13 +35,13 @@ export class SregService {
   leerServicio(id:string):Observable<IReg>{
     console.log("Leyendole el Servicio mi pana...")
     //const stUrl =`${ this.baseUrl }/personas/` + id
-    const stUrl =`${ this.baseUrl }/personas/${id}`
+    const stUrl =`${ this.baseUrl }usuarios/?mail=${id}`
     return this.http.get<IReg>(stUrl)
   }
 
-  listarServicio():Observable<IReg[]>{
+  listarServicio(id:string):Observable<IReg[]>{
     console.log("Listandole el Servicio mi pana...")
-    const stUrl =`${ this.baseUrl }/personas`
+    const stUrl =`${ this.baseUrl }usuarios/?mail=${id}`
     return this.http.get<IReg[]>(stUrl)
   }
 

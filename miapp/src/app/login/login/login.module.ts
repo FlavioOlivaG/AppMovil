@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { LoginRoutingComponent } from './login-routing';
 import { LoginComponent } from './login.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

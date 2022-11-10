@@ -1,12 +1,13 @@
 export interface IReg {
-    nombre: String,
-    apellido: String,
-    rut: String,
-    mail: String,
-    contrasenna: String,
-    
+    nombre: string,
+    apellido: string,
+    rut: string,
+    mail: string,
+    contrasenna: string,
+
 }
 export interface IRegC {
-    contrasenna: String,
+    contrasenna: string,
     
 }
+

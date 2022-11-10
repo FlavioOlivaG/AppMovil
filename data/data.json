@@ -10,28 +10,36 @@
       "rol": ""
     },
     {
-      "nombre": "fdas",
-      "apellido": "fdsa",
-      "rut": "fdsa",
-      "mail": "fdsa",
+      "nombre": "fewq",
+      "apellido": "fewq",
+      "rut": "fewq",
+      "mail": "fewq",
       "contrasenna": "111",
       "id": 2
     },
     {
-      "nombre": "3rewa",
-      "apellido": "rewa4321ewq",
-      "rut": "redwa",
-      "mail": "rewaefwa",
+      "nombre": "fewq",
+      "apellido": "fewq",
+      "rut": "fewq",
+      "mail": "fewq",
       "contrasenna": "111",
       "id": 3
     },
     {
-      "nombre": "111",
-      "apellido": "111",
+      "nombre": "qqq",
+      "apellido": "qqq",
       "rut": "111",
       "mail": "111",
       "contrasenna": "111",
       "id": 4
+    },
+    {
+      "nombre": "efe",
+      "apellido": "efe",
+      "rut": "fef",
+      "mail": "eee",
+      "contrasenna": "eee",
+      "id": 5
     }
   ],
   "producto": [
