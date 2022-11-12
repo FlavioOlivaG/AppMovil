@@ -12,14 +12,16 @@
       <ion-label position="floating">Correo</ion-label>
       <ion-input type="text" name="txtMail" [(ngModel)]="mail"  required></ion-input>
     </ion-item>
+
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" name="txtContrsenna" [(ngModel)]="contrasenna" required ></ion-input>
-      <ion-input type="password" name="txtContrsena" [(ngModel)]="registro.contrasenna" required ></ion-input>
+      <ion-input type="text" name="txtContrsena" [(ngModel)]="registro.contrasenna" required></ion-input>
     </ion-item>
     <ion-row>
+
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block" (click)="leer()">Iniciar Sesión</ion-button>
+        <ion-button color="danger" expand="block" (click)="leer()">Iniciar Sesión</ion-button>
         <a [routerLink]="['/forgot-password']"  class="small-text">Olvidaste tu contraseña?</a>
       </ion-col>
     </ion-row>

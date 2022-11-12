@@ -7,13 +7,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SregService {
-  private baseUrl: string = "http://localhost:3000/";
+  private baseUrl: string = "http://localhost:3000/usuarios";
   constructor(private http:HttpClient) { }
+
+
+
+
+
+
+
+
 
 
   grabarServicio(reg:IReg):Observable<IReg>{
     console.log("Guardando Datos...",reg)
-    const stUrl =`${ this.baseUrl }usuarios`
+    const stUrl =`${ this.baseUrl }`
     return this.http.post<IReg>(stUrl, reg )
     //.subscribe( persona => {console.log("recibo Service",persona)} );
   }
@@ -21,27 +29,27 @@ export class SregService {
   actualizarServicio(id:string, registro:IReg):Observable<IReg>{
     console.log("Actualizando el Servicio mi pana...")
     //const stUrl =`${ this.baseUrl }/personas/` + id
-    const stUrl =`${ this.baseUrl }/personas/${id}`
+    const stUrl =`${ this.baseUrl }/${id}`
     return this.http.put<IReg>(stUrl, registro)
   }
 
   eliminarServicio(id:string):Observable<IReg>{
     console.log("Eliminando el Servicio mi pana...")
     //const stUrl =`${ this.baseUrl }/personas/` + id
-    const stUrl =`${ this.baseUrl }/personas/${id}`
+    const stUrl =`${ this.baseUrl }/${id}`
     return this.http.delete<IReg>(stUrl)
   }
 
-  leerServicio(id:string):Observable<IReg>{
-    console.log("Leyendole el Servicio mi pana...")
+  leerServicio(mail:string):Observable<IReg>{
+    console.log("Now Loading...")
     //const stUrl =`${ this.baseUrl }/personas/` + id
-    const stUrl =`${ this.baseUrl }usuarios/?mail=${id}`
+    const stUrl =`${ this.baseUrl }/${mail}`
     return this.http.get<IReg>(stUrl)
   }
 
-  listarServicio(id:string):Observable<IReg[]>{
+  listarServicio(id:String):Observable<IReg[]>{
     console.log("Listandole el Servicio mi pana...")
-    const stUrl =`${ this.baseUrl }usuarios/?mail=${id}`
+    const stUrl =`${ this.baseUrl }/?mail=${id}`
     return this.http.get<IReg[]>(stUrl)
   }
 

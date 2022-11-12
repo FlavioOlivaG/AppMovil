@@ -1,56 +1,34 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "el.güito@duocuc.cl",
       "nombre": "Elchan",
       "apellido": "Güito",
       "rut": "19222333-k",
-      "mail": "el.güito@duocuc.cl",
       "contrasenna": "111eee",
+      "foto": "urlxd",
       "rol": ""
     },
     {
-      "nombre": "fewq",
-      "apellido": "fewq",
-      "rut": "fewq",
-      "mail": "fewq",
-      "contrasenna": "111",
-      "id": 2
+      "nombre": "ee",
+      "apellido": "ee",
+      "rut": "ee",
+      "contrasenna": "ee",
+      "id": "e@",
+      "rol": "",
+      "foto": ""
     },
     {
-      "nombre": "fewq",
-      "apellido": "fewq",
-      "rut": "fewq",
-      "mail": "fewq",
-      "contrasenna": "111",
-      "id": 3
-    },
-    {
-      "nombre": "qqq",
-      "apellido": "qqq",
-      "rut": "111",
-      "mail": "111",
-      "contrasenna": "111",
-      "id": 4
-    },
-    {
-      "nombre": "efe",
-      "apellido": "efe",
-      "rut": "fef",
-      "mail": "eee",
-      "contrasenna": "eee",
-      "id": 5
+      "nombre": "ee",
+      "apellido": "ee",
+      "rut": "ee",
+      "contrasenna": "ee",
+      "id": "ee@",
+      "rol": "",
+      "foto": ""
     }
   ],
-  "producto": [
-    {
-      "nombre": "nombreProducto",
-      "tipo": "electico",
-      "idUsuarioVendedor": 0,
-      "descripcion": "",
-      "id": 0
-    }
-  ],
+  "producto": [],
   "envio": [
     {
       "idComprador": 0,
@@ -88,6 +66,7 @@
       "idProducto": 0,
       "cantProd": 0,
       "precio": 0,
+      "fotoProd": "",
       "id": 0
     }
   ],

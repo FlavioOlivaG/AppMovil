@@ -13,47 +13,30 @@ export class LoginComponent implements OnInit {
     nombre: "",
     apellido: "",
     rut: "",
-    mail: "",
     contrasenna: "",
+    id: "",
+    rol:"",
+    foto:""
   }
 
-  mail: "";
-  contrasenna: "";
-
-
+  mail: '';
+  contrasenna: '';
 
   constructor(private cliServ:SregService, protected router:Router) { }
 
   ngOnInit() {
-
-      }
+  
+  }
   
 
   leer(){
-    
-    if (this.contrasenna == ""  || this.mail == "" || this.contrasenna == null){
-      
-      console.log("Algun campo vacio?")
-      this.router.navigate(['login/loginShopdown'])
-      
-    }else{
 
-      console.log("Buscando datos de:",this.mail)
+      console.log("Buscando datos:",this.mail)
       this.cliServ.leerServicio(this.mail)
-      .subscribe(reg => {
-      console.log(`Recibo ${this.mail}`, reg)
-        this.registro = reg })
-
-
-      if (this.contrasenna == this.registro.contrasenna){
-
-        this.router.navigate(['perfil/Perfil'])
-
-      }else{ 
-          console.log("Error contraseña o email incorrecta")
-      }
-
-    } 
+                  .subscribe({next:reg => {this.registro = reg
+                    console.log(`Recibo ${this.mail}`, reg)
+                    console.log(`datos del mail ${this.registro.id}`, this.registro)
+                  }})
 
 
     
