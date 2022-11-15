@@ -50,7 +50,12 @@ const routes: Routes = [
   {
     path: 'perfil/Perfil',
     loadChildren: () => import('./usuarios/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'agregar/productos',
+    loadChildren: () => import('./agregar-productos/agregar-productos.module').then( m => m.AgregarProductosPageModule)
   }
+
   
 
 

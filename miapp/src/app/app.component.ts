@@ -11,6 +11,7 @@ export class AppComponent {
     //Carro y favorito mientras no se solucione el toolbar
     { title: 'Carro', url: '/carro/Carro', icon: 'cart' },
     { title: 'Favorito', url: '/favorito/Favorito', icon: 'heart' },
+    { title: 'Agregar Productos', url: 'agregar/productos', icon: 'heart' },
   ];
   //Barra del menu de la barra del menu
   public appBarraBarra = [
