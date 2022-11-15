@@ -28,14 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./usuarios/comprador/tienda/tienda.module').then( m => m.TiendaPageModule)
   },
   {
-    path: 'Configuracion/configuracion',
-    loadChildren: () => import('./usuarios/Configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
-  },
-  {
-    path: 'Ayuda/ayuda',
-    loadChildren: () => import('./usuarios/Ayuda/ayuda.module').then( m => m.AyudaPageModule)
-  },
-  {
     path: 'Tu-Tienda/tu-tienda',
     loadChildren: () => import('./usuarios/vendedor/Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
   },

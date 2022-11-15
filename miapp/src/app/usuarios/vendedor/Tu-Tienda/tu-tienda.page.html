@@ -3,20 +3,13 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title> Aqui Vendemos</ion-title>
-    <ion-buttons slot="end">
-      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/favorito/Favorito']" lines="none"
-        detail="false">
-        <ion-icon name="heart"></ion-icon>
-      </ion-button>
-      <ion-button auto-hide="false" routerDirection="root" [routerLink]="['/carro/Carro']" lines="none" detail="false">
-        <ion-icon name="cart"></ion-icon>
-      </ion-button>
+    <ion-title> Vendedor</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button [routerLink]="['/agregar/productos']">Agregar</ion-button>
+      <ion-button> </ion-button>      
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-
 
 <ion-content>
 
@@ -37,22 +30,7 @@
     </ion-item>
   </ion-card>
 
-  <ion-card>
-    <ion-img src="data:image/jpeg;base64,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"></ion-img>
-    <ion-card-header>
-      <ion-card-title>Nombre Producto</ion-card-title>
-      <ion-card-subtitle>$500.000</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      La descripcion del producto se va a encontrat Aqui
-      Se que me escuchas muchacho: ñam ñam ñlam ñam ñam ñam
-      ñam ñam ñam ñam ñam ñam ñam ñam ñam ñam ña ñam ñam ñam
-    </ion-card-content>
-    <ion-item>
-      <ion-button fill="" style="color:rgb(199, 143, 255)" slot="start">Dejar de Vender</ion-button>
-      <ion-button shape="round" style="color:rgb(0, 180, 15); text-align:center" fill="clear" slot="end">Rematar</ion-button>
-    </ion-item>
-  </ion-card>
+
 
 
 
