@@ -37,6 +37,25 @@ export class LoginComponent implements OnInit {
                     console.log(`Recibo ${this.mail}`, reg)
                     console.log(`datos del mail ${this.registro.id}`, this.registro)
                   }})
+      
+      if(this.registro.id == null || this.registro.id == ""){
+        console.log("error no existe email")
+        this.router.navigate(['login/loginShopdown']);
+      }else{
+        if(this.registro.contrasenna == this.contrasenna){
+          this.router.navigate(['perfil/Perfil']);
+
+        }else{
+          console.log("contraseña o email incorrecto")
+          this.router.navigate(['login/loginShopdown']);
+        }
+
+
+
+
+      }
+
+
 
 
     
