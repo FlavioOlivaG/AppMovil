@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'tienda/tiendaShopdown',
-    loadChildren: () => import('./usuarios/tienda/tienda.module').then( m => m.TiendaPageModule)
+    loadChildren: () => import('./usuarios/comprador/tienda/tienda.module').then( m => m.TiendaPageModule)
   },
   {
     path: 'Configuracion/configuracion',
@@ -37,23 +37,23 @@ const routes: Routes = [
   },
   {
     path: 'Tu-Tienda/tu-tienda',
-    loadChildren: () => import('./usuarios/Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
+    loadChildren: () => import('./usuarios/vendedor/Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
   },
   {
     path: 'carro/Carro',
-    loadChildren: () => import('./usuarios/carro/carro.module').then( m => m.CarroPageModule)
+    loadChildren: () => import('./usuarios/comprador/carro/carro.module').then( m => m.CarroPageModule)
   },
   {
     path: 'favorito/Favorito',
-    loadChildren: () => import('./usuarios/favorito/favorito.module').then( m => m.FavoritoPageModule)
+    loadChildren: () => import('./usuarios/comprador/favorito/favorito.module').then( m => m.FavoritoPageModule)
   },
   {
     path: 'perfil/Perfil',
-    loadChildren: () => import('./usuarios/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./usuarios/vendedor/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
     path: 'agregar/productos',
-    loadChildren: () => import('./agregar-productos/agregar-productos.module').then( m => m.AgregarProductosPageModule)
+    loadChildren: () => import('./usuarios/vendedor/agregar-productos/agregar-productos.module').then( m => m.AgregarProductosPageModule)
   }
 
   
