@@ -35,6 +35,60 @@
       "id": "@",
       "rol": "",
       "foto": ""
+    },
+    {
+      "nombre": "harrys",
+      "apellido": "json",
+      "rut": "432532",
+      "contrasenna": "1",
+      "id": "harryas@",
+      "rol": "",
+      "foto": ""
+    },
+    {
+      "nombre": "el",
+      "apellido": "chango",
+      "rut": "ee",
+      "contrasenna": "1",
+      "id": "@a",
+      "rol": "",
+      "foto": ""
+    },
+    {
+      "nombre": "ee",
+      "apellido": "ee",
+      "rut": "ee",
+      "contrasenna": "e",
+      "id": "ee@@",
+      "rol": "",
+      "foto": ""
+    },
+    {
+      "nombre": "e",
+      "apellido": "e",
+      "rut": "e",
+      "contrasenna": "q",
+      "id": "@e",
+      "rol": "",
+      "foto": ""
+    },
+    {
+      "nombre": "e",
+      "apellido": "ee",
+      "rut": "e",
+      "contrasenna": "e",
+      "id": "eeeeeeee@",
+      "rol": "",
+      "foto": ""
+    },
+    {
+      "nombre": "ee",
+      "apellido": "ee",
+      "rut": "ee",
+      "contrasenna": "e",
+      "id": "ee@e",
+      "rol": "",
+      "foto": ""
     }
   ],
   "producto": [],

@@ -3,7 +3,7 @@ export interface IReg {
     apellido: String
     rut: String
     contrasenna: String
-    id: String
+    id: string
     rol: String
     foto: String
 

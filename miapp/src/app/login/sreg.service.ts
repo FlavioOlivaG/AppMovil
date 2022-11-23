@@ -7,19 +7,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SregService {
-  private baseUrl: string = "http://localhost:3000/usuarios";
+  baseUrl = 'http://localhost:3000/usuarios'
   constructor(private http:HttpClient) { }
 
 
 
 
 
-
-
-
-
-
-  grabarServicio(reg:IReg):Observable<IReg>{
+grabarServicio(reg:IReg):Observable<IReg>{
     console.log("Guardando Datos...",reg)
     const stUrl =`${ this.baseUrl }`
     return this.http.post<IReg>(stUrl, reg )

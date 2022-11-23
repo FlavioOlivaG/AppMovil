@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { AlertController } from "@ionic/angular";
 import { IReg } from "../interface/i-reg";
 import { SregService } from "../sreg.service";
 
@@ -22,14 +23,15 @@ export class LoginComponent implements OnInit {
   mail: '';
   contrasenna: '';
 
-  constructor(private cliServ:SregService, protected router:Router) { }
+  constructor(private cliServ:SregService, protected router:Router, private alertService:AlertController) { 
+  }
 
   ngOnInit() {
-  
+
   }
   
 
-  leer(){
+  async leer(){
 
       console.log("Buscando datos:",this.mail)
       this.cliServ.leerServicio(this.mail)
@@ -38,27 +40,37 @@ export class LoginComponent implements OnInit {
                     console.log(`datos del mail ${this.registro.id}`, this.registro)
                   }})
       
-      if(this.registro.id == null || this.registro.id == ""){
-        console.log("error no existe email")
+      if(this.registro.id == null || this.registro.id == "" || this.registro.contrasenna == "" || this.registro.contrasenna == null){
+        const alert = await this.alertService.create({
+          header: "Error",
+          message: 'Debes llenar todos los datos',
+          buttons: ['OK']
+          
+        });
+        await alert.present();
         this.router.navigate(['login/loginShopdown']);
       }else{
         if(this.registro.contrasenna == this.contrasenna){
+          localStorage.setItem('ingresado', 'true');
           this.router.navigate(['perfil/Perfil']);
 
         }else{
+          const alert = await this.alertService.create({
+            header: "Error",
+            message: 'Contraseña incorrecta',
+            buttons: ['OK']
+            
+          });
+          await alert.present();
+
+
+
           console.log("contraseña o email incorrecto")
           this.router.navigate(['login/loginShopdown']);
         }
 
-
-
-
       }
-
-
-
-
     
-
+  
   }    
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { AlertController } from "@ionic/angular";
 import { IReg } from "../interface/i-reg";
 import { SregService } from "../sreg.service";
 
@@ -19,17 +20,16 @@ export class RegisterComponent implements OnInit {
       foto:""
       
     }
-  
   contrasenna: ""
   private valCorreo : boolean;
 
 
-  constructor(private cliServ:SregService, protected router:Router) { }
+  constructor(private cliServ:SregService, protected router:Router, private alertService:AlertController) { }
 
   ngOnInit() {
   }
 
-  grabar(){
+  async grabar(){
     this.valCorreo = false
     if (this.registro.contrasenna == ""  || this.registro.contrasenna == null || 
       this.registro.id == null || this.registro.id == "" ||
@@ -38,8 +38,16 @@ export class RegisterComponent implements OnInit {
       this.registro.rut== ""  || 
       this.contrasenna == "" || this.contrasenna == null)
       {
+        const alert = await this.alertService.create({
+          header: "Error",
+          message: 'Campo Vacio',
+          buttons: ['OK']
+          
+        });
+        await alert.present();
+
+
         this.router.navigate(['Register/registerShopdown']);
-      console.log("Algun campo vacio?");
       
       
     }else {
@@ -47,27 +55,41 @@ export class RegisterComponent implements OnInit {
       if(this.registro.id.includes("@")){
         console.log("Correo valido",this.registro.id)
         this.valCorreo = true;
+      }else{
+        const alert = await this.alertService.create({
+          header: "Error",
+          message: 'Correo invalido',
+          buttons: ['OK']
+          
+        });
+        await alert.present();
       }
     }
       
       
     if(this.valCorreo == true){
       if (this.registro.contrasenna == this.contrasenna){
-        console.log("grabando... ",this.registro)
+        console.log("grabando...as ",this.registro)
         this.cliServ.grabarServicio(this.registro)
-                    .subscribe( persona => {console.log("Register component....",persona)} );
+        .subscribe(() => {console.log("RegisterComponent ",this.registro)})
+                    
           this.router.navigate(['folder/Folders']);
         
         }else{
+          const alert = await this.alertService.create({
+            header: "Error",
+            message: 'Contraseña no coincide',
+            buttons: ['OK']
+            
+          });
+          await alert.present();
 
-        console.log("Error Contraseña no coincide");
         this.router.navigate(['Register/registerShopdown']);
         
         }
 
     }else{
       this.router.navigate(['Register/registerShopdown']);
-      console.log("Correo invalido")
     }
 
 
