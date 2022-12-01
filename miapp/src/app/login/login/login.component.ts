@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AlertController } from "@ionic/angular";
-import { IReg } from "../interface/i-reg";
+import { IReg } from "src/app/interfaces/i-reg";
 import { SregService } from "../sreg.service";
 
 @Component({
@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
     foto:""
   }
 
-  mail: '';
-  contrasenna: '';
+  mail: string;
+  contrasenna: string;
 
   constructor(private cliServ:SregService, protected router:Router, private alertService:AlertController) { 
   }
@@ -37,10 +37,9 @@ export class LoginComponent implements OnInit {
       this.cliServ.leerServicio(this.mail)
                   .subscribe({next:reg => {this.registro = reg
                     console.log(`Recibo ${this.mail}`, reg)
-                    console.log(`datos del mail ${this.registro.id}`, this.registro)
                   }})
       
-      if(this.registro.id == null || this.registro.id == "" || this.registro.contrasenna == "" || this.registro.contrasenna == null){
+      if(this.mail == null || this.mail == "" || this.contrasenna == "" || this.contrasenna == null){
         const alert = await this.alertService.create({
           header: "Error",
           message: 'Debes llenar todos los datos',
@@ -49,12 +48,16 @@ export class LoginComponent implements OnInit {
         });
         await alert.present();
         this.router.navigate(['login/loginShopdown']);
-      }else{
+      }
+      else{
+        
         if(this.registro.contrasenna == this.contrasenna){
-          localStorage.setItem('ingresado', 'true');
+          localStorage.setItem('ingresado', 'true')
+          localStorage.setItem('usuario', this.mail)
           this.router.navigate(['perfil/Perfil']);
 
-        }else{
+        }
+        else{
           const alert = await this.alertService.create({
             header: "Error",
             message: 'Contraseña incorrecta',
@@ -62,10 +65,6 @@ export class LoginComponent implements OnInit {
             
           });
           await alert.present();
-
-
-
-          console.log("contraseña o email incorrecto")
           this.router.navigate(['login/loginShopdown']);
         }
 

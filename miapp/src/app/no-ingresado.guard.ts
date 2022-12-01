@@ -11,7 +11,7 @@ export class NoIngresadoGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(localStorage.getItem('ingresado')){
+      if(localStorage.getItem('ingresado') != null) {
         this.router.navigate(['perfil/Perfil']);
         return false;
       }else{

@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder/Folders',
     loadChildren: () => import('./login/folder/folder.module').then( m => m.FolderPageModule),
     canActivate: [NoIngresadoGuard]
   },
@@ -35,11 +35,6 @@ const routes: Routes = [
     canActivate: [IngresadoGuard]
   },
   {
-    path: 'Tu-Tienda/tu-tienda',
-    loadChildren: () => import('./usuarios/vendedor/Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule),
-    canActivate: [IngresadoGuard]
-  },
-  {
     path: 'carro/Carro',
     loadChildren: () => import('./usuarios/comprador/carro/carro.module').then( m => m.CarroPageModule),
     canActivate: [IngresadoGuard]
@@ -57,6 +52,26 @@ const routes: Routes = [
   {
     path: 'agregar/productos',
     loadChildren: () => import('./usuarios/vendedor/agregar-productos/agregar-productos.module').then( m => m.AgregarProductosPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'Tu-Tienda/tu-tienda',
+    loadChildren: () => import('./usuarios/vendedor/list-producto/list-producto.module').then( m => m.ListProductoPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'detalle-producto/:id',
+    loadChildren: () => import('./usuarios/vendedor/detalle-producto/detalle-producto.module').then( m => m.DetalleProductoPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'actualizar-producto/:id',
+    loadChildren: () => import('./usuarios/vendedor/actualizar-producto/actualizar-producto.module').then( m => m.ActualizarProductoPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'eliminar-producto/:id',
+    loadChildren: () => import('./usuarios/vendedor/eliminar-producto/eliminar-producto.module').then( m => m.EliminarProductoPageModule),
     canActivate: [IngresadoGuard]
   }
 

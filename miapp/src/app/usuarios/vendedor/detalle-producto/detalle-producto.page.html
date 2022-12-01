@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Volver"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ID# {{producto.id}}</ion-card-subtitle>
+      <ion-card-title> {{producto.nombre}} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <strong> {{producto.forma}} </strong>
+      <strong> {{producto.tipoProducto}} </strong>
+      <strong> {{producto.color}} </strong>
+      <strong> {{producto.tamanno}} </strong>
+      <strong> {{producto.marca}} </strong>
+    </ion-card-content>
+
+    <ion-button [routerLink]="['/actualizar-producto',producto.id]" color="warning"><ion-icon name="create"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/eliminar-producto', producto.id]"color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+
+
+  </ion-card>
+</ion-content>

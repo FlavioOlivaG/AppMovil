@@ -1,11 +1,18 @@
 import { Component, OnInit  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IReg } from 'src/app/interfaces/i-reg';
+import { SregService } from 'src/app/login/sreg.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.page.html',
-  styleUrls: ['./perfil.page.scss'],
+  styleUrls: ['./perfil.page.scss']
 })
-export class PerfilPage {
+export class PerfilPage implements OnInit{
+
+
+  ngOnInit() {
+   this.leer();
+  }
   public appBarra = [
     //Tienda de la pagina
     { title: 'Tienda', url: '/tienda/tiendaShopdown', icon: 'storefront' },
@@ -15,5 +22,33 @@ export class PerfilPage {
     { title: 'Perfil', url: '/perfil/Perfil', icon: 'person-circle' },
 
   ];
+
+
+  registro:IReg={
+    nombre: "",
+    apellido: "",
+    rut: "",
+    contrasenna: "",
+    id: "",
+    rol:"",
+    foto:""
+  }
+
+  constructor(private cliServ:SregService) { 
+  }
+
+  async leer(){
+
+    this.cliServ.leerServicio(localStorage.getItem('usuario'))
+                .subscribe({next:reg => {this.registro = reg
+                }})
+    
+   
+  
+
+}    
+
+
+
 
 }

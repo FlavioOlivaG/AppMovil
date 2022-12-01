@@ -32,6 +32,19 @@
       <ion-label position="floating">Confiramar Contraseña</ion-label>
       <ion-input type="password" name="txCContrasenna" [(ngModel)]="contrasenna" required></ion-input>
     </ion-item>
+
+    <ion-row text-center>
+      <ion-button icon-left large (click)="abrirGaleria()">
+        <ion-icon name="images" ></ion-icon> Subir Foto
+      </ion-button>
+    </ion-row>
+
+    <div id="loadedImages">
+      <ion-item >
+        <ion-img src="{{ foto }}" class="imagenes"></ion-img>
+      </ion-item>
+    </div>
+
     <ion-row>
       <ion-col>
         <ion-button type="submit" color="danger" (click)="grabar()" [routerLink]="['perfil/Perfil']" expand="block">Registrarse</ion-button>

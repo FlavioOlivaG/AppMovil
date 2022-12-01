@@ -1,12 +1,12 @@
 {
   "usuarios": [
     {
-      "id": "el.güito@duocuc.cl",
+      "id": "el.guito@duocuc.cl",
       "nombre": "Elchan",
       "apellido": "Güito",
       "rut": "19222333-k",
-      "contrasenna": "111eee",
-      "foto": "urlxd",
+      "contrasenna": "eee",
+      "foto": "https://m1.paperblog.com/i/427/4275387/mira-4-graciosas-divertidas-imagenes-changos--L-ZywFDb.jpeg",
       "rol": ""
     },
     {
@@ -19,79 +19,69 @@
       "foto": ""
     },
     {
-      "nombre": "ee",
-      "apellido": "ee",
-      "rut": "ee",
+      "nombre": "efra",
+      "apellido": "pasaein",
+      "rut": "200443780",
       "contrasenna": "ee",
-      "id": "ee@",
+      "id": "ef@",
       "rol": "",
-      "foto": ""
+      "foto": [
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221128-WA00182990631771823338165.jpg"
+      ]
     },
     {
-      "nombre": "sd",
-      "apellido": "ds",
-      "rut": "sd",
-      "contrasenna": "1",
-      "id": "@",
-      "rol": "",
-      "foto": ""
-    },
-    {
-      "nombre": "harrys",
-      "apellido": "json",
-      "rut": "432532",
-      "contrasenna": "1",
-      "id": "harryas@",
-      "rol": "",
-      "foto": ""
-    },
-    {
-      "nombre": "el",
-      "apellido": "chango",
-      "rut": "ee",
-      "contrasenna": "1",
-      "id": "@a",
-      "rol": "",
-      "foto": ""
-    },
-    {
-      "nombre": "ee",
-      "apellido": "ee",
-      "rut": "ee",
+      "nombre": "efr@",
+      "apellido": "Pasarin",
+      "rut": "kdkdd",
       "contrasenna": "e",
-      "id": "ee@@",
+      "id": "e@e",
       "rol": "",
-      "foto": ""
+      "foto": [
+        "O",
+        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221117-WA00089061865360124727316.jpg",
+        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00264926811758589571078.jpg"
+      ]
     },
     {
-      "nombre": "e",
-      "apellido": "e",
-      "rut": "e",
-      "contrasenna": "q",
-      "id": "@e",
+      "nombre": "efrain",
+      "apellido": "pasarin",
+      "rut": "200443780",
+      "contrasenna": "f",
+      "id": "efra@duo",
       "rol": "",
-      "foto": ""
-    },
-    {
-      "nombre": "e",
-      "apellido": "ee",
-      "rut": "e",
-      "contrasenna": "e",
-      "id": "eeeeeeee@",
-      "rol": "",
-      "foto": ""
-    },
-    {
-      "nombre": "ee",
-      "apellido": "ee",
-      "rut": "ee",
-      "contrasenna": "e",
-      "id": "ee@e",
-      "rol": "",
-      "foto": ""
+      "foto": "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG_20211231_2152536532440039500608517.jpg"
     }
   ],
-  "producto": [],
+  "producto": [
+    {
+      "nombre": "una weaita",
+      "forma": "de weaita genuina",
+      "tipoProducto": "Otro",
+      "color": "Rojo",
+      "tamanno": "0.34\"",
+      "marca": "weoligia",
+      "precio": 60000,
+      "detalle": "es una weaita geniuina Rick, ha estado en el ano de mi awela por generaciones",
+      "foto": [],
+      "id": 1
+    },
+    {
+      "nombre": "fotos",
+      "forma": "fotos",
+      "tipoProducto": "Electronica",
+      "color": "Azul",
+      "tamanno": "38383",
+      "marca": "jdjd",
+      "precio": 565655,
+      "detalle": "wjfydufud",
+      "foto": [
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00537977713106420740666.jpg",
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00277184291044499388600.jpg",
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00262641659030172989396.jpg"
+      ],
+      "id": 2
+    }
+  ],
   "envio": [
     {
       "idComprador": 0,

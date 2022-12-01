@@ -4,9 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AgregarProductosPageRoutingModule } from './agregar-productos-routing.module';
-
 import { AgregarProductosPage } from './agregar-productos.page';
+import { AgregarProductosPageRoutingModule } from './agregar-productos-routing.module';
 
 @NgModule({
   imports: [
