@@ -1,40 +1,137 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "el.guito@duocuc.cl",
       "nombre": "Elchan",
       "apellido": "Güito",
       "rut": "19222333-k",
-      "mail": "el.güito@duocuc.cl",
-      "contrasenna": "111eee",
+      "contrasenna": "eee",
+      "foto": "https://m1.paperblog.com/i/427/4275387/mira-4-graciosas-divertidas-imagenes-changos--L-ZywFDb.jpeg",
       "rol": ""
     },
     {
-      "id": 2,
-      "nombre": "Diego",
-      "apellido": "Escobar",
-      "rut": "20.056.378-k",
-      "mail": "die.escobar@duocuc.cl",
-      "contrasenna": "111eee",
-      "rol": "ADMIN"
+      "nombre": "ee",
+      "apellido": "ee",
+      "rut": "ee",
+      "contrasenna": "ee",
+      "id": "e@",
+      "rol": "",
+      "foto": ""
     },
     {
-      "nombre": "Flavio",
-      "apellido": "Oliva",
-      "rut": "20.565.258-k",
-      "mail": "fl.oliva@duocuc.cl",
-      "contrasenna": "111eee",
-      "rol": "ADMIN",
-      "id": 3
+      "nombre": "efra",
+      "apellido": "pasaein",
+      "rut": "200443780",
+      "contrasenna": "ee",
+      "id": "ef@",
+      "rol": "",
+      "foto": [
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221128-WA00182990631771823338165.jpg"
+      ]
     },
     {
-      "nombre": "Efraín",
-      "apellido": "Pasarín",
-      "rut": "20.044.378-0",
-      "mail": "ef.pasarin@duocuc.cl",
-      "contrasenna": "111eee",
-      "rol": "ADMIN",
-      "id": 4
+      "nombre": "efr@",
+      "apellido": "Pasarin",
+      "rut": "kdkdd",
+      "contrasenna": "e",
+      "id": "e@e",
+      "rol": "",
+      "foto": [
+        "O",
+        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221117-WA00089061865360124727316.jpg",
+        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00264926811758589571078.jpg"
+      ]
+    },
+    {
+      "nombre": "efrain",
+      "apellido": "pasarin",
+      "rut": "200443780",
+      "contrasenna": "f",
+      "id": "efra@duo",
+      "rol": "",
+      "foto": "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG_20211231_2152536532440039500608517.jpg"
+    }
+  ],
+  "producto": [
+    {
+      "nombre": "una weaita",
+      "forma": "de weaita genuina",
+      "tipoProducto": "Otro",
+      "color": "Rojo",
+      "tamanno": "0.34\"",
+      "marca": "weoligia",
+      "precio": 60000,
+      "detalle": "es una weaita geniuina Rick, ha estado en el ano de mi awela por generaciones",
+      "foto": [],
+      "id": 1
+    },
+    {
+      "nombre": "fotos",
+      "forma": "fotos",
+      "tipoProducto": "Electronica",
+      "color": "Azul",
+      "tamanno": "38383",
+      "marca": "jdjd",
+      "precio": 565655,
+      "detalle": "wjfydufud",
+      "foto": [
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00537977713106420740666.jpg",
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00277184291044499388600.jpg",
+        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00262641659030172989396.jpg"
+      ],
+      "id": 2
+    }
+  ],
+  "envio": [
+    {
+      "idComprador": 0,
+      "estado": "enviado, entregado, en proceso de empaque",
+      "idDireccion": 0,
+      "id": 0
+    }
+  ],
+  "direccion": [
+    {
+      "idComprador": 0,
+      "pais": "Solo en chile",
+      "region": "RM",
+      "comuna": "san bernardo",
+      "calle": "eliodoro weas ctm",
+      "numeroDir": 1251,
+      "numeroDpto": "",
+      "id": 0
+    }
+  ],
+  "boleta": [
+    {
+      "idComprador": 0,
+      "idVendedor": 0,
+      "idEnvio": 0,
+      "idProducto": 0,
+      "idDetalleCompra": 0,
+      "total": 0,
+      "id": 0
+    }
+  ],
+  "carrito": [
+    {
+      "idComprador": 0,
+      "idProducto": 0,
+      "cantProd": 0,
+      "precio": 0,
+      "fotoProd": "",
+      "id": 0
+    }
+  ],
+  "factura": [
+    {
+      "idComprador": 0,
+      "idVendedor": 0,
+      "idEnvio": 0,
+      "idProducto": 0,
+      "idDetalleCompra": 0,
+      "total": 0,
+      "id": 0
     }
   ]
 }

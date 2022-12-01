@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@awesome-cordova-plugins/core": "^6.2.0",
+    "@awesome-cordova-plugins/image-picker": "^6.2.0",
+    "cordova-plugin-telerik-imagepicker": "^2.3.6",
+    "firebase": "^9.14.0"
+  }
+}

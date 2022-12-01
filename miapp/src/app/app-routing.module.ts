@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IngresadoGuard } from './ingresado.guard';
+import { NoIngresadoGuard } from './no-ingresado.guard';
 
 const routes: Routes = [
   {
@@ -8,49 +10,71 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./login/folder/folder.module').then( m => m.FolderPageModule)
+    path: 'folder/Folders',
+    loadChildren: () => import('./login/folder/folder.module').then( m => m.FolderPageModule),
+    canActivate: [NoIngresadoGuard]
   },
   {
     path: 'login/loginShopdown',
-    loadChildren: () => import('./login/login/login.module').then( m => m.LoginModule)
+    loadChildren: () => import('./login/login/login.module').then( m => m.LoginModule),
+    canActivate: [NoIngresadoGuard]
   },
   {
     path: 'forgot-password',
-    loadChildren: () => import('./login/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+    loadChildren: () => import('./login/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule),
+    canActivate: [NoIngresadoGuard]
   },
   {
     path: 'Register/registerShopdown',
-    loadChildren: () => import('./login/Register/register.module').then( m => m.RegisterModule)
+    loadChildren: () => import('./login/Register/register.module').then( m => m.RegisterModule),
+    canActivate: [NoIngresadoGuard]
   },
   {
     path: 'tienda/tiendaShopdown',
-    loadChildren: () => import('./usuarios/tienda/tienda.module').then( m => m.TiendaPageModule)
-  },
-  {
-    path: 'Configuracion/configuracion',
-    loadChildren: () => import('./usuarios/Configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
-  },
-  {
-    path: 'Ayuda/ayuda',
-    loadChildren: () => import('./usuarios/Ayuda/ayuda.module').then( m => m.AyudaPageModule)
-  },
-  {
-    path: 'Tu-Tienda/tu-tienda',
-    loadChildren: () => import('./usuarios/Tu-Tienda/tu-tienda.module').then( m => m.TuTiendaPageModule)
+    loadChildren: () => import('./usuarios/comprador/tienda/tienda.module').then( m => m.TiendaPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'carro/Carro',
-    loadChildren: () => import('./usuarios/carro/carro.module').then( m => m.CarroPageModule)
+    loadChildren: () => import('./usuarios/comprador/carro/carro.module').then( m => m.CarroPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'favorito/Favorito',
-    loadChildren: () => import('./usuarios/favorito/favorito.module').then( m => m.FavoritoPageModule)
+    loadChildren: () => import('./usuarios/comprador/favorito/favorito.module').then( m => m.FavoritoPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'perfil/Perfil',
-    loadChildren: () => import('./usuarios/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./usuarios/vendedor/perfil/perfil.module').then( m => m.PerfilPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'agregar/productos',
+    loadChildren: () => import('./usuarios/vendedor/agregar-productos/agregar-productos.module').then( m => m.AgregarProductosPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'Tu-Tienda/tu-tienda',
+    loadChildren: () => import('./usuarios/vendedor/list-producto/list-producto.module').then( m => m.ListProductoPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'detalle-producto/:id',
+    loadChildren: () => import('./usuarios/vendedor/detalle-producto/detalle-producto.module').then( m => m.DetalleProductoPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'actualizar-producto/:id',
+    loadChildren: () => import('./usuarios/vendedor/actualizar-producto/actualizar-producto.module').then( m => m.ActualizarProductoPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'eliminar-producto/:id',
+    loadChildren: () => import('./usuarios/vendedor/eliminar-producto/eliminar-producto.module').then( m => m.EliminarProductoPageModule),
+    canActivate: [IngresadoGuard]
   }
+
   
 
 

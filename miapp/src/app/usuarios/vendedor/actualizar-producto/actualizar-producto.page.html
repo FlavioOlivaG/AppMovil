@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Actualizar</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Volver"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+
+<ion-item lines="full">
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input type="text" name="txNombre" [(ngModel)]="producto.nombre" required></ion-input>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Forma</ion-label>
+  <ion-input type="text" name="txForma" [(ngModel)]="producto.forma"required></ion-input>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Tipo de producto</ion-label>
+  <ion-select placeholder="Seleccione Tipo" name="txtipoProducto" [(ngModel)]="producto.tipoProducto" required>
+    <ion-select-option value="Hogar">Hogar</ion-select-option>
+    <ion-select-option value="Electronica">Electronica</ion-select-option>
+    <ion-select-option value="Musica">Musica</ion-select-option>
+    <ion-select-option value="Cocina">Cocina</ion-select-option>
+    <ion-select-option value="Otro">Otro...</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Color</ion-label>
+  <ion-select placeholder="Seleccione Color" name="txColor" [(ngModel)]="producto.color" required>
+    <ion-select-option value="Negro">Negro</ion-select-option>
+    <ion-select-option value="Blanco">Blanco</ion-select-option>
+    <ion-select-option value="Rojo">Rojo</ion-select-option>
+    <ion-select-option value="Azul">Azul</ion-select-option>
+    <ion-select-option value="Amarillo">Amarillo</ion-select-option>
+    <ion-select-option value="Verde">Verde</ion-select-option>
+    <ion-select-option value="Otro">Otro...</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Tamaño</ion-label>
+  <ion-input type="text" name="txTamanno"[(ngModel)]="producto.tamanno"  required></ion-input>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Marca</ion-label>
+  <ion-input type="text" name="txMarca" [(ngModel)]="producto.marca" required></ion-input>
+</ion-item>
+<ion-item lines="full">
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input type="number" name="txPrecio" [(ngModel)]="producto.precio" required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-textarea placeholder="Detalles" name="txDetalle" [autoGrow]="true"
+  [(ngModel)]="producto.detalle">
+  </ion-textarea>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Url Foto Referencia Producto</ion-label>
+  <ion-input type="text" name="txUrl" [(ngModel)]="producto.foto" required></ion-input>
+</ion-item>
+
+
+<ion-row>
+    <ion-col>
+      <ion-button (click)="updateProducto()" expand="block" color="success">Actualizar</ion-button>
+    </ion-col>
+</ion-row>
+
+  </form>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eliminar</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Volver"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ID# {{producto.id}}</ion-card-subtitle>
+      <ion-card-title> Usted desea eliminar a {{producto.nombre}} ?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <strong> {{producto.forma}} </strong>
+      <strong> {{producto.tipoProducto}} </strong>
+      <strong> {{producto.color}} </strong>
+      <strong> {{producto.tamanno}} </strong>
+      
+      <ion-button (click)="eliminarProducto()" expand="block" color="danger">Eliminar</ion-button>
+
+    </ion-card-content>
+
+   
+
+
+  </ion-card>
+</ion-content>

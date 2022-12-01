@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tu Tienda</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button [routerLink]="['/agregar/productos']"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      <ion-button> </ion-button>      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor ="let g of productos; let indexArray = index" [routerLink]="['/detalle-producto', g.id]">
+      <ion-label> {{ g.nombre }} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-tab-bar >
+  <ion-tab-button auto-hide="false" *ngFor="let p of appBarra; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+      <ion-icon  name ={{p.icon}}></ion-icon>
+      <ion-label>{{ p.title }}</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

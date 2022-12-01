@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar</ion-title>
+    <ion-buttons slot="end">
+    <ion-back-button text="Volver"> </ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+
+<ion-item lines="full">
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input type="text" name="txNombre" [(ngModel)]="newProducto.nombre" required></ion-input>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Forma</ion-label>
+  <ion-input type="text" name="txForma" [(ngModel)]="newProducto.forma" required></ion-input>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Tipo de producto</ion-label>
+  <ion-select placeholder="Seleccione Tipo" name="txtipoProducto" [(ngModel)]="newProducto.tipoProducto" required>
+    <ion-select-option value="Hogar">Hogar</ion-select-option>
+    <ion-select-option value="Electronica">Electronica</ion-select-option>
+    <ion-select-option value="Musica">Musica</ion-select-option>
+    <ion-select-option value="Cocina">Cocina</ion-select-option>
+    <ion-select-option value="Otro">Otro...</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Color</ion-label>
+  <ion-select placeholder="Seleccione Color" name="txColor" [(ngModel)]="newProducto.color" required>
+    <ion-select-option value="Negro">Negro</ion-select-option>
+    <ion-select-option value="Blanco">Blanco</ion-select-option>
+    <ion-select-option value="Rojo">Rojo</ion-select-option>
+    <ion-select-option value="Azul">Azul</ion-select-option>
+    <ion-select-option value="Amarillo">Amarillo</ion-select-option>
+    <ion-select-option value="Verde">Verde</ion-select-option>
+    <ion-select-option value="Otro...">Otro</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Tamaño</ion-label>
+  <ion-input type="text" name="txTamanno" [(ngModel)]="newProducto.tamanno" required></ion-input>
+</ion-item>
+
+<ion-item lines="full">
+  <ion-label position="floating">Marca</ion-label>
+  <ion-input type="text" name="txMarca" [(ngModel)]="newProducto.marca" required></ion-input>
+</ion-item>
+
+
+<ion-item lines="full">
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input type="number" name="txPrecio" [(ngModel)]="newProducto.precio" required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-textarea placeholder="Detalles" name="txDetalle" [autoGrow]="true"
+  [(ngModel)]="newProducto.detalle">
+  </ion-textarea>
+</ion-item>
+
+<ion-row text-center>
+  <ion-button icon-left large (click)="abrirGaleria()">
+    <ion-icon name="images" ></ion-icon> Subir Foto
+  </ion-button>
+</ion-row>
+
+<div id="loadedImages">
+  <ion-item *ngFor="let item of fotos; let i = index">
+    <ion-icon name="close-circle" (click)="borrarFoto(i)"></ion-icon>
+    <ion-img src="item" class="imagenes"></ion-img>
+  </ion-item>
+</div>
+
+
+<ion-row>
+    <ion-col>
+      <ion-button (click)="crearProducto()" expand="block" color="success">Agregar</ion-button>
+    </ion-col>
+</ion-row>
+
+  </form>
+</ion-content>

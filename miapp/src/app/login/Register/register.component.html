@@ -22,7 +22,7 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" name="txMail" [(ngModel)]="registro.mail" required></ion-input>
+      <ion-input type="text" name="txMail" [(ngModel)]="registro.id" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
@@ -30,13 +30,25 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Confiramar Contraseña</ion-label>
-      <ion-input type="password" name="txCContrasenna"  required></ion-input>
+      <ion-input type="password" name="txCContrasenna" [(ngModel)]="contrasenna" required></ion-input>
     </ion-item>
+
+    <ion-row text-center>
+      <ion-button icon-left large (click)="abrirGaleria()">
+        <ion-icon name="images" ></ion-icon> Subir Foto
+      </ion-button>
+    </ion-row>
+
+    <div id="loadedImages">
+      <ion-item >
+        <ion-img src="{{ foto }}" class="imagenes"></ion-img>
+      </ion-item>
+    </div>
+
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" (click)="grabar()" expand="block">Registrarse</ion-button>
+        <ion-button type="submit" color="danger" (click)="grabar()" [routerLink]="['perfil/Perfil']" expand="block">Registrarse</ion-button>
       </ion-col>
     </ion-row>
-    {{registro.nombre}}
   </form>
 </ion-content>
