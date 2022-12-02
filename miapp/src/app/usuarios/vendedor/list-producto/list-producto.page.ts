@@ -36,7 +36,7 @@ export class ListProductoPage {
     await loading.present();
 
 
-    this.productosServ.listarProducto().subscribe(
+    this.productosServ.getProductoByIDVendedor(localStorage.getItem('usuario')).subscribe(
       (resp) =>{
         loading.dismiss();
         let listString = JSON.stringify(resp)

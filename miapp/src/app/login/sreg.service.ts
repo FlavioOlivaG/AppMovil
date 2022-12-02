@@ -24,11 +24,8 @@ grabarServicio(reg:IReg):Observable<IReg>{
     //.subscribe( persona => {console.log("recibo Service",persona)} );
   }
 
-  actualizarServicio(id:string, registro:IReg):Observable<IReg>{
-    console.log("Actualizando el Servicio mi pana...")
-    //const stUrl =`${ this.baseUrl }/personas/` + id
-    const stUrl =`${ this.baseUrl }/${id}`
-    return this.http.put<IReg>(stUrl, registro)
+  actualizarServicio(reg:IReg):Observable<Iprodcutos>{
+    return this.http.put<Iprodcutos>(`${environment.apiURL}/usuarios/${reg.id}`, reg)
   }
 
   eliminarServicio(id:string):Observable<IReg>{
@@ -70,6 +67,13 @@ grabarServicio(reg:IReg):Observable<IReg>{
 
   eliminarProducto(producto:any):Observable<Iprodcutos>{
     return this.http.delete<Iprodcutos>(`${environment.apiURL}/producto/${producto.id}`)
+  }
+  getProductoByIDVendedor(id:String):Observable<Iprodcutos>{
+    return this.http.get<Iprodcutos>(`${environment.apiURL}/producto/?idVendedor=${id}`)
+  }
+
+  getUsuarioByID(id:String):Observable<IReg>{
+    return this.http.get<IReg>(`${environment.apiURL}/usuarios/?id=${id}`)
   }
 
 }

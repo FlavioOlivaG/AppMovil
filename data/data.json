@@ -10,44 +10,45 @@
       "rol": ""
     },
     {
-      "nombre": "ee",
-      "apellido": "ee",
-      "rut": "ee",
-      "contrasenna": "ee",
-      "id": "e@",
-      "rol": "",
-      "foto": ""
-    },
-    {
-      "nombre": "efra",
-      "apellido": "pasaein",
-      "rut": "200443780",
-      "contrasenna": "ee",
-      "id": "ef@",
-      "rol": "",
-      "foto": [
-        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221128-WA00182990631771823338165.jpg"
-      ]
-    },
-    {
-      "nombre": "efr@",
-      "apellido": "Pasarin",
-      "rut": "kdkdd",
-      "contrasenna": "e",
-      "id": "e@e",
-      "rol": "",
-      "foto": [
-        "O",
-        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221117-WA00089061865360124727316.jpg",
-        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00264926811758589571078.jpg"
-      ]
-    },
-    {
       "nombre": "efrain",
       "apellido": "pasarin",
       "rut": "200443780",
       "contrasenna": "f",
       "id": "efra@duo",
+      "favorito": [
+        {
+          "id": 1,
+          "nombre": "una weaita",
+          "tipoProducto": "Otro",
+          "color": "Rojo",
+          "tamanno": "0.34\"",
+          "marca": "weoligia",
+          "precio": 60000,
+          "detalle": "es una weaita geniuina Rick, ha estado en el ano de mi awela por generaciones",
+          "foto": [
+            "https://static.emol.cl/emol50/Fotos/2022/11/09/file_20221109163614.jpg",
+            "https://www.rdstation.com/blog/wp-content/uploads/sites/2/2017/09/thestocks.jpg"
+          ],
+          "cantidad": 1
+        },
+        {
+          "id": 2,
+          "nombre": "fotos",
+          "tipoProducto": "Electronica",
+          "color": "Azul",
+          "tamanno": "38383",
+          "marca": "jdjd",
+          "precio": 565655,
+          "detalle": "wjfydufud",
+          "foto": [
+            "https://www.rdstation.com/blog/wp-content/uploads/sites/2/2017/09/thestocks.jpg",
+            "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00277184291044499388600.jpg",
+            "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00262641659030172989396.jpg"
+          ],
+          "cantidad": 1
+        }
+      ],
+      "carro": [],
       "rol": "",
       "foto": "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG_20211231_2152536532440039500608517.jpg"
     }
@@ -62,7 +63,10 @@
       "marca": "weoligia",
       "precio": 60000,
       "detalle": "es una weaita geniuina Rick, ha estado en el ano de mi awela por generaciones",
-      "foto": [],
+      "foto": [
+        "https://static.emol.cl/emol50/Fotos/2022/11/09/file_20221109163614.jpg",
+        "https://www.rdstation.com/blog/wp-content/uploads/sites/2/2017/09/thestocks.jpg"
+      ],
       "id": 1
     },
     {
@@ -75,11 +79,42 @@
       "precio": 565655,
       "detalle": "wjfydufud",
       "foto": [
-        "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00537977713106420740666.jpg",
+        "https://www.rdstation.com/blog/wp-content/uploads/sites/2/2017/09/thestocks.jpg",
         "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00277184291044499388600.jpg",
         "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00262641659030172989396.jpg"
       ],
       "id": 2
+    },
+    {
+      "nombre": "Mesa",
+      "tipoProducto": "Hogar",
+      "color": "Negro",
+      "tamanno": "70cm x 90cm",
+      "marca": "N/A",
+      "precio": 60000,
+      "detalle": "mesa mesa mesa que mas aplauda le mando le mando le mando a la niña za za za ya ku za ya ku za",
+      "foto": [
+        "https://ripleycl.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fimagenes-sellers-mercado-ripley%2F2019%2F09%2F23144110%2FIMG_4828.jpg?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=3bc7cdff095c5230c5fb00e1e81d7749",
+        "https://http2.mlstatic.com/D_NQ_NP_856177-MLM49716576667_042022-O.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_943702-MLM49716643343_042022-O.jpg"
+      ],
+      "idVendedor": "efra@duo",
+      "id": 3
+    },
+    {
+      "nombre": "Organos Pulmon",
+      "tipoProducto": "Otro",
+      "color": "Otro...",
+      "tamanno": "50cm cubicos",
+      "marca": "diego",
+      "precio": 5000000,
+      "detalle": "Vendo pulmon del diego a 5 palos ya que no ha fumado nunca, sin ningun daño ",
+      "foto": [
+        "https://www.semana.com/resizer/wPjmB5ykzT8CVcIgYqhix-yDi5I=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/OIVUU2E3UNFDFE23NO253KDOA4.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD4hUsU9F_sa_X4pCoAliy4fJhnXW350rYXw&usqp=CAU"
+      ],
+      "idVendedor": "efra@duo",
+      "id": 4
     }
   ],
   "envio": [

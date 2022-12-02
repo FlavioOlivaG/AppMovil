@@ -31,7 +31,9 @@ export class PerfilPage implements OnInit{
     contrasenna: "",
     id: "",
     rol:"",
-    foto:""
+    foto:"",
+    carro:null,
+    favorito: null
   }
 
   constructor(private cliServ:SregService) { 

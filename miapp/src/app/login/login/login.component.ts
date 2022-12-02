@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit {
     contrasenna: "",
     id: "",
     rol:"",
-    foto:""
+    foto:"",
+    carro: null,
+    favorito: null
   }
 
   mail: string;

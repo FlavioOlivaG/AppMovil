@@ -1,3 +1,6 @@
+import { IProdEnCarro } from "./iprod-en-carro"
+
+
 export interface IReg {
     nombre: String
     apellido: String
@@ -6,6 +9,8 @@ export interface IReg {
     id: String
     rol: String
     foto: String
+    carro: Array<IProdEnCarro>
+    favorito: Array<IProdEnCarro>
 
 }
 

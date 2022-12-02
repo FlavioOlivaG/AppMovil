@@ -22,7 +22,9 @@ export class RegisterComponent implements OnInit {
       contrasenna: "",
       id: "",
       rol: "",
-      foto:""
+      foto:"",
+      carro:null,
+      favorito: null
       
     }
   contrasenna: ""

@@ -1,5 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
+import { SregService } from 'src/app/login/sreg.service';
 @Component({
   selector: 'app-tienda',
   templateUrl: './tienda.page.html',
@@ -23,4 +24,52 @@ export class TiendaPage  {
     { title: 'Carro', url: 'carro/Carro', icon: 'cart' },
     
   ]
+
+
+
+  productos = []
+
+  constructor(private productosServ:SregService, private loadingCtrl:LoadingController) { }
+
+  ionViewWillEnter(){
+    this.loadProductos()
+  }
+
+  async loadProductos(event?: InfiniteScrollCustomEvent){
+    const loading = await this.loadingCtrl.create({
+      message: "Cargando...",
+      spinner: "bubbles"
+    }
+
+    );
+    await loading.present();
+
+
+    this.productosServ.listarProducto().subscribe(
+      (resp) =>{
+        loading.dismiss();
+        let listString = JSON.stringify(resp)
+        this.productos = JSON.parse(listString)
+        event?.target.complete()
+      },
+      (err) =>{
+        console.log(err.message)
+        loading.dismiss();}
+    )
+
+
+
+
+  }
+
+
+
+
 }
+
+
+
+
+
+
+
