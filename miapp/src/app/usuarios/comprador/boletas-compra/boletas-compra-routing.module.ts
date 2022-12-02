@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: BoletasCompraPage
+  },
+  {
+    path: 'det-boleta',
+    loadChildren: () => import('./det-boleta/det-boleta.module').then( m => m.DetBoletaPageModule)
   }
 ];
 

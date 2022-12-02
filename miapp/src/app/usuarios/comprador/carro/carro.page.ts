@@ -136,8 +136,7 @@ export class CarroPage {
 
   pagar(){
     localStorage.setItem("Total", this.total.toString());
-    this.vaciarCarro();
-    this.router.navigate([''])
+    this.router.navigate(['formulario-pago'])
   }
 
 

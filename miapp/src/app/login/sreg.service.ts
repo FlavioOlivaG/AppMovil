@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { Iproductoadd } from 'src/app/interfaces/iproductoadd';
 import { environment } from 'src/environments/environment';
 import { Iprodcutos } from '../interfaces/iprodcutos';
+import { IaddBoleta } from '../interfaces/iadd-boleta';
+import { IBoleta } from '../interfaces/iboleta';
 
 @Injectable({
   providedIn: 'root'
@@ -72,8 +74,32 @@ grabarServicio(reg:IReg):Observable<IReg>{
     return this.http.get<Iprodcutos>(`${environment.apiURL}/producto/?idVendedor=${id}`)
   }
 
+
+
+
+//Boletas 
   getUsuarioByID(id:String):Observable<IReg>{
     return this.http.get<IReg>(`${environment.apiURL}/usuarios/?id=${id}`)
+  }
+
+  listarBoleta():Observable<IBoleta>{
+    this.http.get<IBoleta>(`${environment.apiURL}/boleta`)
+    return this.http.get<IBoleta>(`${environment.apiURL}/boleta`)
+  }
+  getBoletaByIDComprador(id:String):Observable<IBoleta>{
+    return this.http.get<IBoleta>(`${environment.apiURL}/boleta/?idComprador=${id}`)
+  }
+
+  getBoletaByIDVendedor(id:String):Observable<IBoleta>{
+    return this.http.get<IBoleta>(`${environment.apiURL}/boleta/?detalle?idVendedor=${id}`)
+  }
+
+  getBoletaByID(id:number):Observable<IReg>{
+    return this.http.get<IReg>(`${environment.apiURL}/boleta/?id=${id}`)
+  }
+
+  crearBoleta(newBoleta:IaddBoleta):Observable<IaddBoleta>{
+    return this.http.post<IaddBoleta>(`${environment.apiURL}/boleta`, newBoleta)
   }
 
 }
