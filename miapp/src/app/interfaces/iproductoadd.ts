@@ -1,6 +1,5 @@
 export interface Iproductoadd {
     nombre: String
-    forma: String,
     tipoProducto: String,
     color: String,
     tamanno: String,
@@ -8,4 +7,5 @@ export interface Iproductoadd {
     precio: number,
     detalle: String,
     foto: Array<String>
+    idVendedor: String
 }

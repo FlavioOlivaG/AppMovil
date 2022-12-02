@@ -73,7 +73,25 @@ const routes: Routes = [
     path: 'eliminar-producto/:id',
     loadChildren: () => import('./usuarios/vendedor/eliminar-producto/eliminar-producto.module').then( m => m.EliminarProductoPageModule),
     canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'det-prod/:id',
+    loadChildren: () => import('./usuarios/comprador/det-prod/det-prod.module').then( m => m.DetProdPageModule),
+    canActivate: [IngresadoGuard]
+  },  {
+    path: 'formulario-pago',
+    loadChildren: () => import('./usuarios/comprador/formulario-pago/formulario-pago.module').then( m => m.FormularioPagoPageModule)
+  },
+  {
+    path: 'boletas-compra',
+    loadChildren: () => import('./usuarios/comprador/boletas-compra/boletas-compra.module').then( m => m.BoletasCompraPageModule)
+  },
+  {
+    path: 'boleta-venta',
+    loadChildren: () => import('./usuarios/vendedor/boleta-venta/boleta-venta.module').then( m => m.BoletaVentaPageModule)
   }
+
+
 
   
 

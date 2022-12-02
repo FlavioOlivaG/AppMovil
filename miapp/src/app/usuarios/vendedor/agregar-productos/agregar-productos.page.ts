@@ -17,14 +17,14 @@ export class AgregarProductosPage implements OnInit {
 
   newProducto: Iproductoadd = {
     nombre: "",
-    forma: "",
     tipoProducto: "",
     color: "",
     tamanno: "",
     marca: "",
     precio: 0,
     detalle: "",
-    foto: null
+    foto: null,
+    idVendedor: localStorage.getItem("usuario")
   
   }
 

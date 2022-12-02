@@ -12,7 +12,6 @@ export class DetalleProductoPage  {
   producto = {
     id: 0,
     nombre: "pantalon",
-    forma: "largo",
     tipoProducto: "ropa",
     color: "azul",
     tamanno: "M",
@@ -39,7 +38,6 @@ export class DetalleProductoPage  {
         this.producto = {
           id: resp[0].id,
           nombre: resp[0].nombre,
-          forma: resp[0].forma,
           tipoProducto: resp[0].tipoProducto,
           color: resp[0].color,
           tamanno: resp[0].tamanno,

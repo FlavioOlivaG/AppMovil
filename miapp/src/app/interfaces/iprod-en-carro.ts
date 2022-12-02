@@ -1,5 +1,4 @@
-
-export interface Iprodcutos {
+export interface IProdEnCarro {
     id: number,
     nombre: String
     tipoProducto: String,
@@ -8,6 +7,7 @@ export interface Iprodcutos {
     marca: String,
     precio: number,
     detalle: String,
-    foto: Array<String>
-    idVendedor:String
+    foto: Array<String>,
+    idVendedor:String,
+    cantidad:number
 }

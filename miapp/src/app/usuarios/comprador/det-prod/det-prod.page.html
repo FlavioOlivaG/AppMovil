@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Volver"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <ion-card>
+      <ion-slides>
+        <ion-slide *ngFor="let foto of producto.foto">
+          <img src="{{foto}}"/>
+        </ion-slide>
+      </ion-slides>
+          
+      <ion-card-content >
+        
+        <ion-card-title>
+          {{ producto.nombre }}
+        </ion-card-title>
+        <ion-card-title>
+          Precio: ${{ producto.precio }}
+        </ion-card-title><div></div>
+        <strong>ID Vendedor: {{producto.idVendedor}}</strong><div></div>
+        <strong>Marca: {{producto.marca}}</strong><div></div>
+        <strong>Tipo: {{producto.tipoProducto}}</strong><div></div>
+        <strong>Tamaño: {{producto.tamanno}}</strong><div></div>
+        <strong>Color: {{producto.color}}</strong><div></div>
+        <p>{{producto.detalle}}</p>
+
+        <ion-buttons class="centerButtons">
+          <ion-button class="centerButton" (click)="ponerFavorito()"><ion-icon slot="end" name="heart-outline"></ion-icon>Añadir Favorito</ion-button>
+        </ion-buttons>
+  
+  
+  
+      </ion-card-content>
+      <ion-button expand="block" color="danger" (click)="ponerCarrito()">Añadir al carro</ion-button>
+  
+    </ion-card>
+
+
+
+
+
+</ion-content>
