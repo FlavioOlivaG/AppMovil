@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>FormularioPago</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button> Volver </ion-back-button>
+    </ion-buttons>
+    <ion-title>Formulario Pago</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txNombre" [(ngModel)]="registro.nombre" disabled></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input type="text" name="txApellido" [(ngModel)]="registro.apellido" disabled></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Rut</ion-label>
+      <ion-input type="text" name="txRut" [(ngModel)]="registro.rut" disabled></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">*Direccion Region/Ciudad/Calle</ion-label>
+      <ion-input type="text" name="txDireccion" [(ngModel)]="direccion.Direccion"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">N°Deprartamento(opcional)</ion-label>
+      <ion-input type="text" name="txNDep" [(ngModel)]="direccion.nDep"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-title>Total a Pagar ${{ pago }}</ion-title>
+    </ion-item>
 
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" (click)="aceptar()" [routerLink]="['perfil/Perfil']" expand="block">Pagar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

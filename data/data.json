@@ -6,15 +6,7 @@
       "apellido": "Güito",
       "rut": "19222333-k",
       "contrasenna": "eee",
-      "foto": "https://m1.paperblog.com/i/427/4275387/mira-4-graciosas-divertidas-imagenes-changos--L-ZywFDb.jpeg",
-      "rol": ""
-    },
-    {
-      "nombre": "efrain",
-      "apellido": "pasarin",
-      "rut": "200443780",
-      "contrasenna": "f",
-      "id": "efra@duo",
+      "carro": [],
       "favorito": [
         {
           "id": 1,
@@ -32,19 +24,46 @@
           "cantidad": 1
         },
         {
-          "id": 2,
-          "nombre": "fotos",
-          "tipoProducto": "Electronica",
-          "color": "Azul",
-          "tamanno": "38383",
-          "marca": "jdjd",
-          "precio": 565655,
-          "detalle": "wjfydufud",
+          "id": 4,
+          "nombre": "Organos Pulmon",
+          "tipoProducto": "Otro",
+          "color": "Otro...",
+          "tamanno": "50cm cubicos",
+          "marca": "diego",
+          "precio": 5000000,
+          "detalle": "Vendo pulmon del diego a 5 palos ya que no ha fumado nunca, sin ningun daño ",
           "foto": [
-            "https://www.rdstation.com/blog/wp-content/uploads/sites/2/2017/09/thestocks.jpg",
-            "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00277184291044499388600.jpg",
-            "file:///data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA00262641659030172989396.jpg"
+            "https://www.semana.com/resizer/wPjmB5ykzT8CVcIgYqhix-yDi5I=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/OIVUU2E3UNFDFE23NO253KDOA4.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD4hUsU9F_sa_X4pCoAliy4fJhnXW350rYXw&usqp=CAU"
           ],
+          "idVendedor": "efra@duo",
+          "cantidad": 1
+        }
+      ],
+      "foto": "https://m1.paperblog.com/i/427/4275387/mira-4-graciosas-divertidas-imagenes-changos--L-ZywFDb.jpeg",
+      "rol": ""
+    },
+    {
+      "nombre": "efrain",
+      "apellido": "pasarin",
+      "rut": "200443780",
+      "contrasenna": "f",
+      "id": "efra@duo",
+      "favorito": [
+        {
+          "id": 5,
+          "nombre": "mini espada",
+          "tipoProducto": "Otro",
+          "color": "Amarillo",
+          "tamanno": "12cm",
+          "marca": "ion",
+          "precio": 60950,
+          "detalle": "espada figurita animé ",
+          "foto": [
+            "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221201-WA00547522684434808547345.jpg",
+            "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA0026429713352354596868.jpg"
+          ],
+          "idVendedor": "efra@duo",
           "cantidad": 1
         }
       ],
@@ -115,58 +134,77 @@
       ],
       "idVendedor": "efra@duo",
       "id": 4
-    }
-  ],
-  "envio": [
+    },
     {
-      "idComprador": 0,
-      "estado": "enviado, entregado, en proceso de empaque",
-      "idDireccion": 0,
-      "id": 0
-    }
-  ],
-  "direccion": [
-    {
-      "idComprador": 0,
-      "pais": "Solo en chile",
-      "region": "RM",
-      "comuna": "san bernardo",
-      "calle": "eliodoro weas ctm",
-      "numeroDir": 1251,
-      "numeroDpto": "",
-      "id": 0
+      "nombre": "mini espada",
+      "tipoProducto": "Otro",
+      "color": "Amarillo",
+      "tamanno": "12cm",
+      "marca": "ion",
+      "precio": 60950,
+      "detalle": "espada figurita animé ",
+      "foto": [
+        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221201-WA00547522684434808547345.jpg",
+        "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA0026429713352354596868.jpg"
+      ],
+      "idVendedor": "efra@duo",
+      "id": 5
     }
   ],
   "boleta": [
     {
-      "idComprador": 0,
-      "idVendedor": 0,
-      "idEnvio": 0,
-      "idProducto": 0,
-      "idDetalleCompra": 0,
-      "total": 0,
-      "id": 0
-    }
-  ],
-  "carrito": [
+      "detalle": [
+        {
+          "id": 4,
+          "nombre": "Organos Pulmon",
+          "tipoProducto": "Otro",
+          "color": "Otro...",
+          "tamanno": "50cm cubicos",
+          "marca": "diego",
+          "precio": 5000000,
+          "detalle": "Vendo pulmon del diego a 5 palos ya que no ha fumado nunca, sin ningun daño ",
+          "foto": [
+            "https://www.semana.com/resizer/wPjmB5ykzT8CVcIgYqhix-yDi5I=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/OIVUU2E3UNFDFE23NO253KDOA4.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD4hUsU9F_sa_X4pCoAliy4fJhnXW350rYXw&usqp=CAU"
+          ],
+          "idVendedor": "efra@duo",
+          "cantidad": 1
+        }
+      ],
+      "idComprador": "el.guito@duocuc.cl",
+      "direccion": {
+        "Direccion": "ee",
+        "nDep": "12",
+        "idComprador": ""
+      },
+      "id": 1
+    },
     {
-      "idComprador": 0,
-      "idProducto": 0,
-      "cantProd": 0,
-      "precio": 0,
-      "fotoProd": "",
-      "id": 0
-    }
-  ],
-  "factura": [
-    {
-      "idComprador": 0,
-      "idVendedor": 0,
-      "idEnvio": 0,
-      "idProducto": 0,
-      "idDetalleCompra": 0,
-      "total": 0,
-      "id": 0
+      "detalle": [
+        {
+          "id": 5,
+          "nombre": "mini espada",
+          "tipoProducto": "Otro",
+          "color": "Amarillo",
+          "tamanno": "12cm",
+          "marca": "ion",
+          "precio": 60950,
+          "detalle": "espada figurita animé ",
+          "foto": [
+            "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221201-WA00547522684434808547345.jpg",
+            "http://localhost/_capacitor_file_/data/user/0/io.ionic.starter/cache/tmp_IMG-20221130-WA0026429713352354596868.jpg"
+          ],
+          "idVendedor": "efra@duo",
+          "cantidad": 1
+        }
+      ],
+      "idComprador": "efra@duo",
+      "direccion": {
+        "Direccion": "RM/ San Bernardo/ Eliodoro Yañez 1830",
+        "nDep": "no",
+        "idComprador": ""
+      },
+      "id": 2
     }
   ]
 }

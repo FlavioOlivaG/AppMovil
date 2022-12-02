@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuracion</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Volver"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+    <ion-content>
+      <ion-list id="inbox-list">
+
+        <ion-title style="color:blueviolet"><ion-icon name="archive-sharp" ></ion-icon>ShopDown </ion-title><div></div>
+
+        <div class="Container">
+          <p style="text-align:center; color:rgb(103, 121, 120);">Correos@shopdown.com</p>
+        </div>
+
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of detalles; let i = index">
+          <ion-item routerDirection="root" (click)="ir(p.url)" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" name={{p.icon}}></ion-icon>
+            <ion-label>{{ p.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    
+</ion-content>
+
+<ion-tab-bar type="overlay">
+  <ion-tab-button auto-hide="false" *ngFor="let p of appBarraBarra; let i = index" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+      <ion-icon  name ={{p.icon}}></ion-icon>
+      <ion-label>{{ p.title }}</ion-label>
+  </ion-tab-button>
+  <ion-tab-button (click)="salir()">
+    <ion-icon name="person-remove"></ion-icon>
+    <ion-label>Cerrar Sesion</ion-label>
+</ion-tab-button>
+</ion-tab-bar>

@@ -1,5 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IReg } from 'src/app/interfaces/i-reg';
 import { SregService } from 'src/app/login/sreg.service';
 @Component({
@@ -36,7 +36,7 @@ export class PerfilPage implements OnInit{
     favorito: null
   }
 
-  constructor(private cliServ:SregService) { 
+  constructor(private cliServ:SregService,private router:Router) { 
   }
 
   async leer(){
@@ -48,7 +48,11 @@ export class PerfilPage implements OnInit{
    
   
 
-}    
+} 
+
+config(){
+  this.router.navigateByUrl("configuracion")
+}
 
 
 

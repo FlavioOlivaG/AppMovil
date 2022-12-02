@@ -23,12 +23,12 @@ export class AgregarProductosPage implements OnInit {
     marca: "",
     precio: 0,
     detalle: "",
-    foto: null,
+    foto: [],
     idVendedor: localStorage.getItem("usuario")
   
   }
 
-  fotos: Array<String>;
+  fotos: Array<string>=[];
   
 
   constructor(
@@ -45,6 +45,7 @@ export class AgregarProductosPage implements OnInit {
   }
 
   crearProducto(){
+    this.newProducto.foto = this.fotos
     this.productoServ.crearProducto(this.newProducto).subscribe()
     this.router.navigateByUrl("Tu-Tienda/tu-tienda")
   }
@@ -52,15 +53,15 @@ export class AgregarProductosPage implements OnInit {
   abrirGaleria() {
 
     let options: ImagePickerOptions = {
-      maximumImagesCount: 3
+      maximumImagesCount: 5
+      
     }
 
     this.imagePicker.getPictures(options).then((results) => {
       for (var i = 0; i < results.length; i++) {
           console.log('Image URI: ' + results[i]);
           let finalVar = this.webView.convertFileSrc(results[i]);
-          this.newProducto.foto.push(finalVar);
-          this.fotos.push(finalVar);
+          this.fotos.push(this.webView.convertFileSrc(results[i]));
           
       }
     }, (err) => { });

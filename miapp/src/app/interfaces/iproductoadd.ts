@@ -6,6 +6,6 @@ export interface Iproductoadd {
     marca: String,
     precio: number,
     detalle: String,
-    foto: Array<String>
+    foto: Array<string>
     idVendedor: String
 }

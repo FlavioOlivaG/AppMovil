@@ -78,18 +78,33 @@ const routes: Routes = [
     path: 'det-prod/:id',
     loadChildren: () => import('./usuarios/comprador/det-prod/det-prod.module').then( m => m.DetProdPageModule),
     canActivate: [IngresadoGuard]
-  },  {
+  },
+  {
     path: 'formulario-pago',
-    loadChildren: () => import('./usuarios/comprador/formulario-pago/formulario-pago.module').then( m => m.FormularioPagoPageModule)
+    loadChildren: () => import('./usuarios/comprador/formulario-pago/formulario-pago.module').then( m => m.FormularioPagoPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'boletas-compra',
-    loadChildren: () => import('./usuarios/comprador/boletas-compra/boletas-compra.module').then( m => m.BoletasCompraPageModule)
+    loadChildren: () => import('./usuarios/comprador/boletas-compra/boletas-compra.module').then( m => m.BoletasCompraPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'boleta-venta',
-    loadChildren: () => import('./usuarios/vendedor/boleta-venta/boleta-venta.module').then( m => m.BoletaVentaPageModule)
+    loadChildren: () => import('./usuarios/vendedor/boleta-venta/boleta-venta.module').then( m => m.BoletaVentaPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'det-Compra/:id',
+    loadChildren: () => import('./usuarios/comprador/boletas-compra/det-boleta/det-boleta.module').then( m => m.DetBoletaPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'configuracion',
+    loadChildren: () => import('./configuaracion/configuaracion.module').then( m => m.ConfiguaracionPageModule),
+    canActivate: [IngresadoGuard]
   }
+
 
 
 

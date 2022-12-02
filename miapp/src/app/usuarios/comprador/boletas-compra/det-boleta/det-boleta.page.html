@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ID# {{boleta.id}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Volver"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Direccion Destino </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <strong>Direccion: {{ boleta.direccion.Direccion }}</strong><div></div>
+      <strong>N°Departamento: {{ boleta.direccion.nDep }} </strong><div></div>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card *ngFor="let i of boleta.detalle ;let ix = index">
+    <ion-card-header>
+      <ion-card-title> {{i.nombre}} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <strong>Precio: $ {{i.precio}} </strong><div></div>
+      <strong>Cantidad: {{i.cantidad}} </strong><div></div>
+      <strong>vendedor:  {{i.idVendedor}} </strong><div></div>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>
